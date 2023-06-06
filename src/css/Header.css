@@ -8,7 +8,7 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    z-index: 999;
+    z-index: 990;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -102,7 +102,7 @@
         display: block;
         opacity: 1;
         right: 0;
-        top: 70px;
+        top: 60px;
         background-color: rgba(0, 0, 0, 0.6);
         transition: all 0.3s ease-in-out;
     }

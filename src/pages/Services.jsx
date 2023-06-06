@@ -1,19 +1,81 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+
+import {collection, getDocs, orderBy, query, getCountFromServer} from 'firebase/firestore';
 
 import styles from '../css/services/Services.module.css';
 import List from "../components/Services/List";
+import Project from "../components/Services/Project";
 
-const Services = () => {
+const Services = ({db}) => {
 
-    return(
+    const [modalOpen, setModalOpen] = useState(false);
+    const [modalData, setModalData] = useState(
+        {img: [''], title: 'title', content: "", tags: ['']}
+    );
+
+    const [docSnapshots, setDocSnapshots] = useState();
+    const [list, setList] = useState([]);
+
+    const projectRef = collection(db, 'projects');
+
+    const openModal = (data) => {
+        setModalData(data);
+        setModalOpen(true);
+    };
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const projects = query(projectRef, orderBy("contentIdx", "desc"));
+            setDocSnapshots(await getDocs(projects));
+        }
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        const setItemList = () => {
+            console.log("setItemList...");
+            if(docSnapshots !== undefined) {
+                console.log("cool!");
+                setList(docSnapshots.docs.map((doc) => ({
+                    key: doc.id,
+                    ...doc.data()
+                })));
+            }
+        }
+        setItemList();
+        console.log(list);
+    }, [docSnapshots]);
+
+    const getLists = () => {
+        if(list.length > 0) {
+            return (
+                <List data={list} handler={openModal} />
+            );
+        } else {
+            return (
+                <div className="noPosts">등록된 게시글이 없습니다.</div>
+            );
+        }
+    }
+
+    return (
         <main className="main">
-            <section className="sections">
+            <section
+                className={["sections", styles
+                    .serviceSection]
+                    .join(' ')}>
                 <div className="backgrounds">
                     <div className={styles.introBgBox}>
                         <img src="" alt="intro bg" className={styles.introBg}/>
                     </div>
                 </div>
-                <div className={["containers", styles.serviceContainer].join(" ")}>
+                <div
+                    className={["containers", styles
+                        .serviceContainer]
+                        .join(" ")}>
                     <div className={styles.titleBox}>
                         <p className={styles.title}>
                             온앤온 협동조합
@@ -26,7 +88,17 @@ const Services = () => {
                 </div>
             </section>
 
-            <List />
+            <List data={list} handler={openModal}/>
+            {/* {getLists()} */}
+
+            <Project
+                open={modalOpen}
+                imgs={modalData.img}
+                title={modalData.title}
+                contents={modalData.content}
+                tags={modalData.tags}
+                close={() => closeModal()}/>
+
         </main>
     );
 

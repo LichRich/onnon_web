@@ -2,23 +2,33 @@ import React, {useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "./Card";
 
-const List = () => {
+import styles from '../../css/services/List.module.css';
+
+const List = ({data, handler}) => {
 
     const [currentTab, setCurrentTab] = useState(0);
-    const [datas, setDatas] = useState([]);
+    const [datas, setDatas] = useState([{category: []}]);
     const [isOrgan, setIsOrgan] = useState(0);
     const [innerMenu, setInnerMenu] = useState([
         {
-            title: 'service1',
-            content: 'service1 content',
+            title: '영상',
+            content: '영상 content',
         },
         {
-            title: 'service2',
-            content: 'service2 content',
+            title: '웹페이지',
+            content: '웹페이지 content',
         },
         {
-            title: 'service3',
-            content: 'service3 content',
+            title: '디자인',
+            content: '디자인 content',
+        },
+        {
+            title: '행사',
+            content: '행사 content',
+        },
+        {
+            title: '지역문제해결',
+            content: '지역문제해결 content',
         },
     ]);
     const [postData, setPostData] = useState([]);
@@ -29,56 +39,59 @@ const List = () => {
 
     useEffect(() => {
         const getItems = () => {
-            setDatas([
-                {
-                    id: 0,
-                    title: 'dummy',
-                    img: '',
-                    content: '<p>this is dummy content</p>',
-                    organ: 'company',
-                    category: 'service1',
-                    tags: ['tag1', 'tag2', 'tag3'],
-                }, {
-                    id: 1,
-                    title: 'dummy2',
-                    img: '',
-                    content: '<p>this is dummy content5</p>',
-                    organ: 'university',
-                    category: 'service2',
-                    tags: ['tag1', 'tag2', 'tag3'],
-                }, {
-                    id: 2,
-                    title: 'dummy3',
-                    img: '',
-                    content: '<p>this is dummy content5</p>',
-                    organ: 'public',
-                    category: 'service1',
-                    tags: ['tag1', 'tag2', 'tag3'],
-                }, {
-                    id: 3,
-                    title: 'dummy4',
-                    img: '',
-                    content: '<p>this is dummy content5</p>',
-                    organ: 'edu',
-                    category: 'service3',
-                    tags: ['tag1', 'tag2', 'tag3'],
-                }, {
-                    id: 4,
-                    title: 'dummy5',
-                    img: '',
-                    content: '<p>this is dummy content5</p>',
-                    organ: 'company',
-                    category: 'service2',
-                    tags: ['tag1', 'tag2', 'tag3'],
-                }
-            ]);
+            console.log(data);
+            // setDatas([
+            //     {
+            //         id: 0,
+            //         title: 'dummy',
+            //         img: ['img', 'img', 'img', 'img'],
+            //         content: '<p>this is dummy content</p>',
+            //         organ: 'company',
+            //         category: 'service1',
+            //         tags: ['tag1', 'tag2', 'tag3'],
+            //     }, {
+            //         id: 1,
+            //         title: 'dummy2',
+            //         img: ['img', 'img', 'img', 'img'],
+            //         content: '<p>this is dummy content5</p>',
+            //         organ: 'university',
+            //         category: 'service2',
+            //         tags: ['tag1', 'tag2', 'tag3'],
+            //     }, {
+            //         id: 2,
+            //         title: 'dummy3',
+            //         img: ['img', 'img', 'img', 'img'],
+            //         content: '<p>this is dummy content5</p>',
+            //         organ: 'public',
+            //         category: 'service1',
+            //         tags: ['tag1', 'tag2', 'tag3'],
+            //     }, {
+            //         id: 3,
+            //         title: 'dummy4',
+            //         img: ['img', 'img', 'img', 'img'],
+            //         content: '<p>this is dummy content5</p>',
+            //         organ: 'edu',
+            //         category: 'service3',
+            //         tags: ['tag1', 'tag2', 'tag3'],
+            //     }, {
+            //         id: 4,
+            //         title: 'dummy5',
+            //         img: ['img', 'img', 'img', 'img'],
+            //         content: '<p>this is dummy content5</p>',
+            //         organ: 'company',
+            //         category: 'service2',
+            //         tags: ['tag1', 'tag2', 'tag3'],
+            //     }
+            // ]);
+            setDatas(data);
+            console.log(datas);
         };
         getItems();
-    }, [])
+    }, [data])
 
     useEffect(() => {
         setPostData(datas.filter((data) => {
-            return data.category === 'service1';
+            return data.category === 'video';
         }));
     }, [datas]);
 
@@ -86,16 +99,24 @@ const List = () => {
     const allInnerMenu = [
         [
             {
-                title: 'service1',
-                content: 'service1 content',
+                title: '영상',
+                content: '영상 content',
             },
             {
-                title: 'service2',
-                content: 'service2 content',
+                title: '웹페이지',
+                content: '웹페이지 content',
             },
             {
-                title: 'service3',
-                content: 'service3 content',
+                title: '디자인',
+                content: '디자인 content',
+            },
+            {
+                title: '행사',
+                content: '행사 content',
+            },
+            {
+                title: '지역문제해결',
+                content: '지역문제해결 content',
             },
         ],
         [
@@ -143,19 +164,27 @@ const List = () => {
                 }));
             }
         } else {
-            setPostData(datas.filter((data) => {
-                return data.category === 'service1';
-            }));
+            // setPostData(datas.filter((data) => {
+            //     return data.category.some(v => (v === 'video'));
+            // }));
 
-            if (currentTab === 1) {
-                setPostData(datas.filter((data) => {
-                    return data.category === 'service2';
-                }));
-            } else if (currentTab === 2) {
-                setPostData(datas.filter((data) => {
-                    return data.category === 'service3';
-                }));
-            }
+            // if (currentTab === 1) {
+            //     setPostData(datas.filter((data) => {
+            //         return data.category.some(v => (v === 'web'));
+            //     }));
+            // } else if (currentTab === 2) {
+            //     setPostData(datas.filter((data) => {
+            //         return data.category.some(v => (v === 'design'));
+            //     }));
+            // } else if (currentTab === 3) {
+            //     setPostData(datas.filter((data) => {
+            //         return data.category.some(v => (v === 'event'));
+            //     }));
+            // } else if (currentTab === 4) {
+            //     setPostData(datas.filter((data) => {
+            //         return data.category.some(v => (v === 'solution'));
+            //     }));
+            // }
         }
     }, [isOrgan, currentTab]);
 
@@ -175,18 +204,18 @@ const List = () => {
     }
 
     return (
-        <section className="sections listSection">
-            <div className="containers listContainer">
-                <div className="outerMenuBox">
-                    <ul className="outerMenuList">
+        <section className={["sections", styles.listSection].join(' ')}>
+            <div className={["containers", styles.listContainer].join(' ')}>
+                <div className={styles.outerMenubox}>
+                    <ul className={styles.outerMenuList}>
                         {
                             menuTab.map((el, idx) => {
                                 return (
                                     <li
                                         key={idx}
                                         className={`${idx === isOrgan
-                                            ? "styles.activeMenuItem"
-                                            : "styles.menuItem"}`}
+                                            ? styles.activeMenuItem
+                                            : styles.menuItem}`}
                                         onClick={() => clickMenu(idx)}>
                                         {el}
                                     </li>
@@ -195,17 +224,17 @@ const List = () => {
                         }
                     </ul>
                 </div>
-                <div className="outerContentBox">
-                    <div className="innerMenuBox">
-                        <ul className="innerMenuList">
+                <div className={styles.outerContentBox}>
+                    <div className={styles.innerMenuBox}>
+                        <ul className={styles.innerMenuList}>
                             {
                                 innerMenu.map((el, idx) => {
                                     return (
                                         <li
                                             key={idx}
                                             className={`${idx === currentTab
-                                                ? "styles.activeMenuItem"
-                                                : "styles.menuItem"}`}
+                                                ? styles.activeInnerMenuItem
+                                                : styles.innerMenuItem}`}
                                             onClick={() => activeMenuHandler(idx)}>
                                             {el.title}
                                         </li>
@@ -214,12 +243,12 @@ const List = () => {
                             }
                         </ul>
                     </div>
-                    <div className="innerContentBox">
-                        <div className="innerContent">
-                            <div className="introBox">
-                                {innerMenu[currentTab].content}
+                    <div className={styles.innerContentBox}>
+                        <div className={styles.innerContent}>
+                            <div className={styles.introBox}>
+                                <p className={styles.intro}>{innerMenu[currentTab].content}</p>
                             </div>
-                            <div className="innerList">
+                            <div className={styles.innerList}>
                                 {
                                     postData.map((data) => {
                                         return (
@@ -227,7 +256,7 @@ const List = () => {
                                                 key={data.id}
                                                 img={data.img}
                                                 title={data.title}
-                                                onclick={() => goProjectDetail(data)}
+                                                handler={() => handler(data)}
                                             />
                                         )
                                     })

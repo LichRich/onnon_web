@@ -42,3 +42,24 @@
 .footer .footerSns a:hover {
     color: #fff !important;
 }
+
+@media(max-width: 1080px) {
+    .footerText {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 930px) {
+    .footerRow {
+        display: flex;
+        flex-direction: column !important;
+    }
+}
+
+@media(max-width: 660px) {
+    .footerInfo {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+    }
+}

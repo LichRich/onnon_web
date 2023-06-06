@@ -19,10 +19,10 @@ const Crew = () => {
                                 <img src="" alt="" className={styles.cardImg}/>
                             </div>
                             <div className={styles.cardNameBox}>
-                                <p className={styles.cardName}>이름</p>
+                                <p className={styles.cardName}>박진규</p>
                             </div>
                             <div className={styles.cardDescBox}>
-                                <p className={styles.cardRole}>역할</p>
+                                <p className={styles.cardRole}>대표</p>
                                 <p className={styles.cardDesc}>한 마디</p>
                             </div>
                         </div>
@@ -33,10 +33,10 @@ const Crew = () => {
                                 <img src="" alt="" className={styles.cardImg}/>
                             </div>
                             <div className={styles.cardNameBox}>
-                                <p className={styles.cardName}>이름</p>
+                                <p className={styles.cardName}>김법성</p>
                             </div>
                             <div className={styles.cardDescBox}>
-                                <p className={styles.cardRole}>역할</p>
+                                <p className={styles.cardRole}>이사</p>
                                 <p className={styles.cardDesc}>한 마디</p>
                             </div>
                         </div>
@@ -47,10 +47,10 @@ const Crew = () => {
                                 <img src="" alt="" className={styles.cardImg}/>
                             </div>
                             <div className={styles.cardNameBox}>
-                                <p className={styles.cardName}>이름</p>
+                                <p className={styles.cardName}>이찬호</p>
                             </div>
                             <div className={styles.cardDescBox}>
-                                <p className={styles.cardRole}>역할</p>
+                                <p className={styles.cardRole}>개발</p>
                                 <p className={styles.cardDesc}>한 마디</p>
                             </div>
                         </div>
@@ -61,10 +61,10 @@ const Crew = () => {
                                 <img src="" alt="" className={styles.cardImg}/>
                             </div>
                             <div className={styles.cardNameBox}>
-                                <p className={styles.cardName}>이름</p>
+                                <p className={styles.cardName}>가요한</p>
                             </div>
                             <div className={styles.cardDescBox}>
-                                <p className={styles.cardRole}>역할</p>
+                                <p className={styles.cardRole}>기획</p>
                                 <p className={styles.cardDesc}>한 마디</p>
                             </div>
                         </div>
