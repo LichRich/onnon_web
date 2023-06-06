@@ -1,0 +1,134 @@
+.navbar {
+    height: 60px;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navbar-logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-logo a {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    height: 50px;
+}
+
+.menu-box {
+    width: 60%;
+    height: fit-content;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item {
+    margin: 0 30px;
+    font-size: 1.3rem;
+    color: #fff;
+    transition: all 0.2s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    color: #537dff;
+}
+
+
+
+@media (max-width: 1230px) {
+
+    .menu-box {
+        width: 10%;
+        height: fit-content;
+    }
+
+    .burger__menu,
+    .x__menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger__menu > div,
+    .x__menu > div {
+        width: 25px;
+        height: 3px;
+        background-color: #eee;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .x__menu > .burger_line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .x__menu > .burger_line2 {
+        opacity: 0;
+    }
+
+    .x__menu > .burger_line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .menu-list-box {
+        height: 100%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-list-visible {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: block;
+        opacity: 1;
+        right: 0;
+        top: 70px;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-list {
+        position: relative;
+        top: 50px;
+        flex-direction: column;
+    }
+
+    .menu-list-hidden > .menu-list {
+        display: none;
+    }
+
+    .menu-item {
+        margin: 15px 0;
+    }
+}
+
+@media (min-width: 1231px) {
+    .burger__menu,
+    .x__menu {
+        display: none;
+    }
+
+    .menu-list {
+        flex-direction: row;
+    }
+}

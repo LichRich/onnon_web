@@ -1,0 +1,47 @@
+.introSection, .introBackground {
+    height: 300px;
+}
+
+.introBgBox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.introBg {
+    width: 100%;
+    height: 100%;
+}
+
+.introContainer {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.introTitleBox {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.introDescBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+    justify-content: start;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+}
+.introDesc {
+    margin-bottom: 10px;
+}

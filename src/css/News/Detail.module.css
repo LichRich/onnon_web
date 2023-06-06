@@ -1,0 +1,32 @@
+.titleBox {
+    position: relative;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 1px solid #000;
+}
+.title {
+    padding-top: 100px;
+    line-height: 40px;
+}
+.date {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: #aaa;
+}
+
+.contentsBox {
+    padding-top: 30px;
+    margin-top: 5px;
+    border-top: 1px solid #000;
+}
+
+.contents {
+    margin: 0 100px;
+}

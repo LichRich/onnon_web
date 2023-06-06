@@ -1,0 +1,44 @@
+.footer {
+    position: relative;
+    background-color: #111 !important;
+    color: #fff;
+}
+
+.copyright,
+.footerSns {
+    margin: 10px 0;
+}
+
+.footerRow {
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerInfo {
+    display: flex;
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.information {
+    margin: 0 1rem;
+}
+
+.footerText {
+    font-size: 1.2rem;
+}
+
+.footer .footerSns {
+    text-align: right;
+}
+
+.footer .footerSns a {
+    display: inline-block;
+    padding: 0 6px;
+    font-size: 1.2rem;
+    color: #aaa !important;
+}
+
+.footer .footerSns a:hover {
+    color: #fff !important;
+}
