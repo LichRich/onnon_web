@@ -28,7 +28,7 @@ const Services = ({db}) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const projects = query(projectRef, orderBy("contentIdx", "desc"));
+            const projects = query(projectRef, orderBy("contentIdx", "asc"));
             setDocSnapshots(await getDocs(projects));
         }
         fetchData();
@@ -36,9 +36,7 @@ const Services = ({db}) => {
 
     useEffect(() => {
         const setItemList = () => {
-            console.log("setItemList...");
             if(docSnapshots !== undefined) {
-                console.log("cool!");
                 setList(docSnapshots.docs.map((doc) => ({
                     key: doc.id,
                     ...doc.data()
@@ -46,20 +44,7 @@ const Services = ({db}) => {
             }
         }
         setItemList();
-        console.log(list);
     }, [docSnapshots]);
-
-    const getLists = () => {
-        if(list.length > 0) {
-            return (
-                <List data={list} handler={openModal} />
-            );
-        } else {
-            return (
-                <div className="noPosts">등록된 게시글이 없습니다.</div>
-            );
-        }
-    }
 
     return (
         <main className="main">
@@ -89,7 +74,6 @@ const Services = ({db}) => {
             </section>
 
             <List data={list} handler={openModal}/>
-            {/* {getLists()} */}
 
             <Project
                 open={modalOpen}

@@ -1,5 +1,6 @@
 .serviceCard {
     padding: 0;
+    margin: 10px;
     width: 256px;
     height: 144px;
     z-index: 5;
@@ -23,7 +24,7 @@
 
 .cardImgBox {
     position: relative;
-    width: 90%;
+    width: 100%;
     margin: auto;
     overflow: hidden;
     border-radius: 20px;
@@ -56,10 +57,11 @@
 
 .cardTitleBox {
     width: 100%;
-    padding: 0 20px;
+    /* padding: 0 20px; */
     opacity: 1;
     position: absolute;
-    bottom: 40%;
+    bottom: 50%;
+    transform: translateY(50%);
     left: 0;
     text-align: center;
     overflow: hidden;
@@ -71,6 +73,7 @@
     font-size: 20px;
     color: #fff;
     margin: 0 0 6px;
+    word-break: keep-all;
   }
 
 .serviceCard:hover .cardTitleBox {

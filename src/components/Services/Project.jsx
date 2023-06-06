@@ -17,15 +17,12 @@ const Project = ({open, close, imgs, title, contents, tags}) => {
         arrows: true
     };
 
-    imgs = ['img', 'img', 'img', 'img'];
-
     const getImgs = () => {
         return (imgs.map((img, idx) => {
             return (
                 <div key={idx} className={styles.carouselItem}>
                     <div className={styles.imgBox}>
-                        {/* <img className={styles.img} src={img} alt="project img"/> */}
-                        <div className={styles.img}>{img}</div>
+                        <img className={styles.img} src={img} alt="project img"/>
                     </div>
                 </div>
             );

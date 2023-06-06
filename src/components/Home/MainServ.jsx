@@ -1,8 +1,14 @@
 import React from "react";
 
 import styles from '../../css/Home/Service.module.css';
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+
+    let navigate = useNavigate();
+    const goService = () => {
+        navigate("/services");
+    }
     
     return (
         <section className="sections">
@@ -23,43 +29,56 @@ const Services = () => {
                     <div className={styles.serviceCard}>
                         <div className={styles.cardContents}>
                             <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg} />
+                                <img src={process.env.PUBLIC_URL+'/services/video.jpg'} alt="" className={styles.cardImg} />
                             </div>
                             <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>service이름</p>
+                                <p className={styles.cardTitle}>영상제작</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.serviceCard}>
                         <div className={styles.cardContents}>
                             <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg} />
+                                <img src={process.env.PUBLIC_URL+'/services/design.png'} alt="" className={styles.cardImg} />
                             </div>
                             <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>service이름</p>
+                                <p className={styles.cardTitle}>디자인</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.serviceCard}>
                         <div className={styles.cardContents}>
                             <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg} />
+                                <img src={process.env.PUBLIC_URL+'/services/web.jpg'} alt="" className={styles.cardImg} />
                             </div>
                             <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>service이름</p>
+                                <p className={styles.cardTitle}>웹사이트 제작</p>
                             </div>
                         </div>
                     </div>
                     <div className={styles.serviceCard}>
                         <div className={styles.cardContents}>
                             <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg} />
+                                <img src={process.env.PUBLIC_URL+'/services/event.jpg'} alt="" className={styles.cardImg} />
                             </div>
                             <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>service이름</p>
+                                <p className={styles.cardTitle}>행사 기획, 운영</p>
                             </div>
                         </div>
                     </div>
+                    <div className={styles.serviceCard}>
+                        <div className={styles.cardContents}>
+                            <div className={[styles.cardImgBox, styles.lastImgBox].join(" ")}>
+                                <img src={process.env.PUBLIC_URL+'/services/solution.png'} alt="" className={[styles.cardImg, styles.lastImg].join(" ")} />
+                            </div>
+                            <div className={styles.cardTitleBox}>
+                                <p className={styles.cardTitle}>지역문제해결</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.btnBox}>
+                    <button className={styles.btn} onClick={() => goService()}>자세히보기</button>
                 </div>
             </div>
         </section>

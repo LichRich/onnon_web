@@ -7,7 +7,7 @@ import styles from '../../css/services/List.module.css';
 const List = ({data, handler}) => {
 
     const [currentTab, setCurrentTab] = useState(0);
-    const [datas, setDatas] = useState([{category: []}]);
+    const [datas, setDatas] = useState([]);
     const [isOrgan, setIsOrgan] = useState(0);
     const [innerMenu, setInnerMenu] = useState([
         {
@@ -35,63 +35,18 @@ const List = ({data, handler}) => {
 
     let navigate = useNavigate();
 
-    const serviceRef = '';
-
     useEffect(() => {
         const getItems = () => {
-            console.log(data);
-            // setDatas([
-            //     {
-            //         id: 0,
-            //         title: 'dummy',
-            //         img: ['img', 'img', 'img', 'img'],
-            //         content: '<p>this is dummy content</p>',
-            //         organ: 'company',
-            //         category: 'service1',
-            //         tags: ['tag1', 'tag2', 'tag3'],
-            //     }, {
-            //         id: 1,
-            //         title: 'dummy2',
-            //         img: ['img', 'img', 'img', 'img'],
-            //         content: '<p>this is dummy content5</p>',
-            //         organ: 'university',
-            //         category: 'service2',
-            //         tags: ['tag1', 'tag2', 'tag3'],
-            //     }, {
-            //         id: 2,
-            //         title: 'dummy3',
-            //         img: ['img', 'img', 'img', 'img'],
-            //         content: '<p>this is dummy content5</p>',
-            //         organ: 'public',
-            //         category: 'service1',
-            //         tags: ['tag1', 'tag2', 'tag3'],
-            //     }, {
-            //         id: 3,
-            //         title: 'dummy4',
-            //         img: ['img', 'img', 'img', 'img'],
-            //         content: '<p>this is dummy content5</p>',
-            //         organ: 'edu',
-            //         category: 'service3',
-            //         tags: ['tag1', 'tag2', 'tag3'],
-            //     }, {
-            //         id: 4,
-            //         title: 'dummy5',
-            //         img: ['img', 'img', 'img', 'img'],
-            //         content: '<p>this is dummy content5</p>',
-            //         organ: 'company',
-            //         category: 'service2',
-            //         tags: ['tag1', 'tag2', 'tag3'],
-            //     }
-            // ]);
             setDatas(data);
-            console.log(datas);
         };
         getItems();
     }, [data])
 
     useEffect(() => {
         setPostData(datas.filter((data) => {
-            return data.category === 'video';
+            if(data !== undefined) {
+                return (data.category.indexOf('video') >= 0);
+            }
         }));
     }, [datas]);
 
@@ -164,27 +119,27 @@ const List = ({data, handler}) => {
                 }));
             }
         } else {
-            // setPostData(datas.filter((data) => {
-            //     return data.category.some(v => (v === 'video'));
-            // }));
+            setPostData(datas.filter((data) => {
+                return (data.category.indexOf('video') >= 0);
+            }));
 
-            // if (currentTab === 1) {
-            //     setPostData(datas.filter((data) => {
-            //         return data.category.some(v => (v === 'web'));
-            //     }));
-            // } else if (currentTab === 2) {
-            //     setPostData(datas.filter((data) => {
-            //         return data.category.some(v => (v === 'design'));
-            //     }));
-            // } else if (currentTab === 3) {
-            //     setPostData(datas.filter((data) => {
-            //         return data.category.some(v => (v === 'event'));
-            //     }));
-            // } else if (currentTab === 4) {
-            //     setPostData(datas.filter((data) => {
-            //         return data.category.some(v => (v === 'solution'));
-            //     }));
-            // }
+            if (currentTab === 1) {
+                setPostData(datas.filter((data) => {
+                    return (data.category.indexOf('web') >= 0);
+                }));
+            } else if (currentTab === 2) {
+                setPostData(datas.filter((data) => {
+                    return (data.category.indexOf('design') >= 0);
+                }));
+            } else if (currentTab === 3) {
+                setPostData(datas.filter((data) => {
+                    return (data.category.indexOf('event') >= 0);
+                }));
+            } else if (currentTab === 4) {
+                setPostData(datas.filter((data) => {
+                    return (data.category.indexOf('solution') >= 0);
+                }));
+            }
         }
     }, [isOrgan, currentTab]);
 

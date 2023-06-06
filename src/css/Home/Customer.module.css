@@ -90,7 +90,8 @@
     padding: 0 20px;
     opacity: 1;
     position: absolute;
-    bottom: 42%;
+    bottom: 50%;
+    transform: translateY(50%);
     left: 0;
     text-align: center;
     overflow: hidden;
@@ -100,6 +101,7 @@
 .cardTitle {
     font-family: gmarket-sans;
     font-size: 20px;
+    font-weight: bold;
     color: #fff;
     margin: 0 0 6px;
   }
