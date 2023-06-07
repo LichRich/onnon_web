@@ -37,6 +37,7 @@ const Project = ({open, close, imgs, title, contents, tags}) => {
             {
                 open
                     ? <section className={styles.modalSection}>
+                            <div className={styles.modalBgBox} onClick={close}></div>
                             <div className={styles.modalContainer}>
                                 <div className={styles.modalTitleBox}>
                                     <p className={styles.modalTitle}>{title}</p>

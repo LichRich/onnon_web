@@ -37,9 +37,9 @@
     z-index: 5;
 }
 
-.customerCard:hover {
+/* .customerCard:hover {
     cursor: pointer;
-}
+} */
 
 .cardContents {
     text-decoration: none;
@@ -126,9 +126,9 @@
     transition: all 0.125s ease-in-out 0s;
 }
 
-.customerCard:hover {
+/* .customerCard:hover {
     cursor: pointer;
-}
+} */
 
 .customerDescBox {
     display: flex;

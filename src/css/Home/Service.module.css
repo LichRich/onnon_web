@@ -41,9 +41,9 @@
     z-index: 5;
 }
 
-.serviceCard:hover {
+/* .serviceCard:hover {
     cursor: pointer;
-}
+} */
 
 .cardContents {
     text-decoration: none;
@@ -135,9 +135,9 @@
     transition: all 0.125s ease-in-out 0s;
 }
 
-.serviceCard:hover {
+/* .serviceCard:hover {
     cursor: pointer;
-}
+} */
 
 .btnBox {
     display: flex;

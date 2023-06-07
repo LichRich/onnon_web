@@ -77,11 +77,11 @@ const List = ({data, handler}) => {
         [
             {
                 title: '관공서',
-                content: '관공서 content',
+                content: '누구나 즐기고 공감할 수 있는 축제/행사를 기획하고 운영합니다.',
             },
             {
                 title: '기업',
-                content: '기업 content',
+                content: '기업의 경쟁력을 최적의 콘텐츠를 통해 시장에 전달합니다.',
             },
             {
                 title: '대학',

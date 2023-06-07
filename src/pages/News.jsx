@@ -4,8 +4,9 @@ import {useNavigate} from "react-router-dom";
 import NewsCard from '../components/News/NewsCard';
 
 import styles from '../css/News/News.module.css';
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
 
-const News = () => {
+const News = ({db}) => {
 
     const [currentTab, setCurrentTab] = useState(0);
     const [datas, setDatas] = useState([]);
@@ -15,55 +16,63 @@ const News = () => {
     const [postData, setPostData] = useState([]);
 
     // firebase db 내 newsRef
-    const newsRef = '';
+    const newsRef = collection(db, 'news');
 
-    // useEffect(() => {     const getItems = async () => {          firebase
-    // newsRef에서 문서들 가져오기         const documentSnapshots = await getDocs(newsRef);
-    // setDatas(documentSnapshots.docs.map((doc) => ({             ...doc.data()
-    // })))     };     getItems(); }, [])
     useEffect(() => {
-        const getItems = () => {
-            setDatas([
-                {
-                    id: 0,
-                    title: 'dummy',
-                    date: '2023-06-01',
-                    img: '',
-                    content: '<p>this is dummy content</p>',
-                    category: 'notice'
-                }, {
-                    id: 1,
-                    title: 'dummy2',
-                    date: '2023-06-01',
-                    img: '',
-                    content: '<p>this is dummy content2</p>',
-                    category: 'news'
-                }, {
-                    id: 2,
-                    title: 'dummy2',
-                    date: '2023-06-01',
-                    img: '',
-                    content: '<p>this is dummy content2</p>',
-                    category: 'news'
-                }, {
-                    id: 3,
-                    title: 'dummy2',
-                    date: '2023-06-01',
-                    img: '',
-                    content: '<p>this is dummy content2</p>',
-                    category: 'news'
-                }, {
-                    id: 4,
-                    title: 'dummy2',
-                    date: '2023-06-01',
-                    img: '',
-                    content: '<p>this is dummy content2</p>',
-                    category: 'news'
-                }
-            ]);
+        const getItems = async () => {
+            // newsRef에서 문서들 가져오기 
+            const q = query(newsRef, orderBy("date", "desc"));
+            const documentSnapshots = await getDocs(q);
+            setDatas(documentSnapshots.docs.map((doc) => ({
+                ...doc.data()
+            })))
         };
         getItems();
-    }, [])
+    }, []);
+
+    // useEffect(() => {
+    //     const getItems = () => {
+    //         setDatas([
+    //             {
+    //                 id: 0,
+    //                 title: 'dummy',
+    //                 date: '2023-06-01',
+    //                 img: '',
+    //                 content: '<p>this is dummy content</p>',
+    //                 category: 'notice'
+    //             }, {
+    //                 id: 1,
+    //                 title: 'dummy2',
+    //                 date: '2023-06-01',
+    //                 img: '',
+    //                 content: '<p>this is dummy content2</p>',
+    //                 category: 'news'
+    //             }, {
+    //                 id: 2,
+    //                 title: 'dummy2',
+    //                 date: '2023-06-01',
+    //                 img: '',
+    //                 content: '<p>this is dummy content2</p>',
+    //                 category: 'news'
+    //             }, {
+    //                 id: 3,
+    //                 title: 'dummy2',
+    //                 date: '2023-06-01',
+    //                 img: '',
+    //                 content: '<p>this is dummy content2</p>',
+    //                 category: 'news'
+    //             }, {
+    //                 id: 4,
+    //                 title: 'dummy2',
+    //                 date: '2023-06-01',
+    //                 img: '',
+    //                 content: '<p>this is dummy content2</p>',
+    //                 category: 'news'
+    //             }
+    //         ]);
+    //     };
+    //     getItems();
+    // }, [])
 
     const menuTab = ['전체', '새소식', '공지사항'];
 
@@ -71,6 +80,7 @@ const News = () => {
 
     useEffect(() => {
         setPostData(datas);
+        console.log(datas);
     }, [datas]);
 
     useEffect(() => {
@@ -94,8 +104,10 @@ const News = () => {
         navigate("/detail", {
             state: {
                 title: d.title,
-                content: d.content,
+                content: d.contents,
                 date: d.date,
+                img: d.img,
+                link: d.link
             }
         })
     }
@@ -140,7 +152,7 @@ const News = () => {
                                     return (
                                         <NewsCard
                                             key={data.id}
-                                            img={data.img}
+                                            img={data.img[0]}
                                             title={data.title}
                                             date={data.date}
                                             handler={() => goNewsDetail(data)}/>

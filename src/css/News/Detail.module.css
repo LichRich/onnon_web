@@ -21,6 +21,14 @@
     color: #aaa;
 }
 
+.imgBox {
+    margin: 0 100px;
+    text-align: center;
+}
+.img {
+    margin: 20px;
+}
+
 .contentsBox {
     padding-top: 30px;
     margin-top: 5px;
@@ -29,4 +37,11 @@
 
 .contents {
     margin: 0 100px;
+}
+
+.linkBox {
+    display: flex;
+    height: 50px;
+    margin-left: 100px;
+    align-items: center;
 }

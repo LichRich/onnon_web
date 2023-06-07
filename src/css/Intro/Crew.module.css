@@ -1,5 +1,9 @@
 .crewSection {
-    height: 700px;
+    height: 600px;
+}
+.crewContainer {
+    height: 600px;
+    margin-top: 50px;
 }
 
 .crewTitleBox {

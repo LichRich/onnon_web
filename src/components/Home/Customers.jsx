@@ -28,18 +28,10 @@ const Customers = ({list}) => {
         }
     ]
 
-    // useEffect(() => {
-    //     list.map((c) => {
-    //         descs = {
-    //             ...list.desc
-    //         }
-    //     })
-    // }, [])
-
     const getCustomers = () => {
         return (list.map((c, index) => {
             return (
-                <div className={styles.customerCard} onMouseOver={() => getDesc(index)}>
+                <div key={index} className={styles.customerCard} onMouseOver={() => getDesc(index)}>
                     <div className={styles.cardContents}>
                         <div className={styles.cardImgBox}>
                             <img src={c.img} alt="" className={styles.cardImg}/>

@@ -63,7 +63,7 @@ const Services = ({db}) => {
                         .join(" ")}>
                     <div className={styles.titleBox}>
                         <p className={styles.title}>
-                            온앤온 협동조합
+                            온앤온 서비스 소개
                         </p>
                     </div>
                     <div className={styles.visionBox}>

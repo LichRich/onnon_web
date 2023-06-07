@@ -29,7 +29,7 @@ const Intro = () => {
 
             <Crew />
             
-            {/* <History /> */}
+            <History />
         </main>
     );
 

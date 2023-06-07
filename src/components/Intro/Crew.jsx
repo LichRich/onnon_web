@@ -6,7 +6,7 @@ const Crew = () => {
 
     return (
         <section className={["sections", styles.crewSection].join(" ")}>
-            <div className="containers">
+            <div className={["containers", styles.crewContainer].join(" ")}>
                 <div className={styles.crewTitleBox}>
                     <p className={styles.crewTitle}>
                         팀 소개
