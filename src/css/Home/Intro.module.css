@@ -17,3 +17,17 @@
     font-weight: bold;
     color: #fff;
 }
+
+@media (max-width: 800px) {
+    .mainTextBox {
+        font-size: 15px;
+    }
+}
+@media (max-width: 580px) {
+    .mainLogo {
+        width: 300px;
+    }
+    .mainTextBox {
+        font-size: 12px;
+    }
+}

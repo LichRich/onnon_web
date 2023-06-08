@@ -22,7 +22,7 @@ const Intro = () => {
                     </div>
                     <div className={styles.introDescBox}>
                         <p className={styles.introDesc}>우리는 희망을 현실로, 그리고 새로운 희망을 만들어갑니다.</p>
-                        <p className={styles.introDesc}>어제의 모습에서 배우고, 오늘에 몰두하며, 내일을 기대하는 온앤온 협동조합입니다.</p>
+                        <p className={styles.introDesc}>어제의 모습에서 배우고, 오늘에 몰두하며, 내일을 기대하는 온앤온협동조합입니다.</p>
                     </div>
                 </div>
             </section>

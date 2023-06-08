@@ -19,3 +19,18 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+@media (max-width: 767px) {
+    .titleBox {
+        font-size: 25px;
+    }
+    
+    .visionBox {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    .visionBox {
+        font-size: 12px;
+    }
+}

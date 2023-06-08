@@ -6,8 +6,8 @@
     justify-content: center;
 }
 
-.serviceTitleBox,
-.serviceDescBox {
+.serviceDescBox,
+.serviceTitleBox {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,14 +36,10 @@
 
 .serviceCard {
     padding: 0;
-    width: 23%;
-    height: 16rem;
+    width: 280px;
+    height: 210px;
     z-index: 5;
 }
-
-/* .serviceCard:hover {
-    cursor: pointer;
-} */
 
 .cardContents {
     text-decoration: none;
@@ -70,7 +66,7 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 16rem;
+    height: 210px;
     object-fit: cover;
     border-radius: 20px;
     margin: auto;
@@ -93,7 +89,6 @@
     transition: all 0.125s ease-in-out 0s;
 }
 
-
 .cardTitleBox {
     width: 100%;
     padding: 0 20px;
@@ -106,14 +101,13 @@
     overflow: hidden;
 }
 
-
 .cardTitle {
     font-family: gmarket-sans;
     font-size: 20px;
     font-weight: bold;
     color: #fff;
     margin: 0 0 6px;
-  }
+}
 
 .serviceCard:hover .cardTitleBox {
     opacity: 0;
@@ -134,10 +128,6 @@
     -o-transform: scale(1.1);
     transition: all 0.125s ease-in-out 0s;
 }
-
-/* .serviceCard:hover {
-    cursor: pointer;
-} */
 
 .btnBox {
     display: flex;
@@ -189,3 +179,201 @@
     height: 0;
     background-color: #000;
 }
+
+@media (max-width: 1199px) {
+    .serviceDescBox,
+    .serviceTitleBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+    }
+
+    .serviceTitle {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .serviceDesc {
+        font-size: 15px;
+        color: #fff;
+    }
+
+    .serviceCardBox {
+        display: flex;
+        width: 90%;
+        height: 380px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .serviceCard {
+        padding: 0;
+        width: 240px;
+        height: 150px;
+        margin: 20px;
+        z-index: 5;
+    }
+
+    .cardContents {
+        text-decoration: none;
+        position: relative;
+        display: block;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .serviceCard:hover .cardImgBox:after {
+        background: none;
+    }
+
+    .cardImgBox {
+        position: relative;
+        width: 90%;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 0;
+        transition: all 0.125s ease-in-out 0s;
+    }
+
+    .cardImgBox:after {
+        border-radius: 0;
+    }
+
+    .cardImg {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 0;
+        margin: auto;
+    }
+
+    .btnBox {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding-top: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+@media (max-width: 991px) {
+    .serviceDescBox,
+    .serviceTitleBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+    }
+
+    .serviceTitle {
+        padding-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    .serviceDesc {
+        font-size: 13px;
+        color: #fff;
+    }
+
+    .serviceCardBox {
+        display: flex;
+        width: 90%;
+        height: 450px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .serviceCard {
+        padding: 0;
+        width: 240px;
+        height: 150px;
+        margin: 0;
+        z-index: 5;
+    }
+    .serviceCard:last-child {
+        width: 480px;
+    }
+
+    .cardContents {
+        text-decoration: none;
+        position: relative;
+        display: block;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .serviceCard:hover .cardImgBox:after {
+        background: none;
+    }
+
+    .cardImgBox {
+        position: relative;
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 0;
+        transition: all 0.125s ease-in-out 0s;
+    }
+
+    .cardImgBox:after {
+        border-radius: 0;
+    }
+
+    .cardImg {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 0;
+        margin: auto;
+    }
+
+    .btnBox {
+        display: flex;
+        width: 100%;
+        height: 50px;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        background: #000;
+        font-weight: bold;
+        color: #fff;
+        line-height: 30px;
+        font-size: 15px;
+        padding: 0;
+        border: none;
+        z-index: 1;
+        -webkit-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+    }
+}
+@media (max-width: 600px) {
+    .serviceCardBox {
+        width: 100%;
+    }
+}
+
+
+/* (min-width: 1400px)
+(max-width: 1399px)
+(max-width: 1199px)
+(max-width: 991px)
+(max-width: 767px) */

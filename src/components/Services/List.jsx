@@ -113,7 +113,7 @@ const List = ({data, handler}) => {
                 setPostData(datas.filter((data) => {
                     return data.organ === 'university';
                 }));
-            } else {
+            } else if(currentTab === 3) {
                 setPostData(datas.filter((data) => {
                     return data.organ === 'edu';
                 }));

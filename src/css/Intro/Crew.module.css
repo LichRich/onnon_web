@@ -1,8 +1,8 @@
 .crewSection {
-    height: 600px;
+    min-height: 600px;
 }
 .crewContainer {
-    height: 600px;
+    min-height: 600px;
     margin-top: 50px;
 }
 
@@ -74,4 +74,77 @@
 .cardRole {
     padding: 5px 0;
     margin: 0;
+}
+
+@media (max-width: 991px) {
+    .crewSection {
+        min-height: 960px;
+    }
+    .crewContainer {
+        margin: auto;
+    }
+
+    .crewTitle {
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .crewCardBox {
+        display: flex;
+        width: 100%;
+        height: 840px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+    .crewCard {
+        padding: 0;
+        width: 250px;
+        height: 420px;
+        z-index: 5;
+    }
+    .cardContents {
+        text-decoration: none;
+        position: relative;
+        display: block;
+        margin: auto;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .cardImgBox {
+        position: relative;
+        width: 100%;
+        height: 320px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .cardImg {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+        margin: auto;
+    }
+    .cardNameBox {
+        display: flex;
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+        overflow: hidden;
+    }
+    .cardName {
+        font-family: gmarket-sans;
+        font-size: 20px;
+    }
+    .cardDescBox {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .cardRole {
+        padding: 5px 0;
+        margin: 0;
+    }
 }

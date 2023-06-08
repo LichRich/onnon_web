@@ -57,7 +57,6 @@
 
 .cardTitleBox {
     width: 100%;
-    /* padding: 0 20px; */
     opacity: 1;
     position: absolute;
     bottom: 50%;
@@ -74,7 +73,7 @@
     color: #fff;
     margin: 0 0 6px;
     word-break: keep-all;
-  }
+}
 
 .serviceCard:hover .cardTitleBox {
     opacity: 0;
@@ -98,4 +97,46 @@
 
 .serviceCard:hover {
     cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .serviceCard {
+        margin: 0;
+        width: 50%;
+        height: 200px;
+    }
+    .cardImgBox {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .cardImg {
+        height: 200px;
+        border-radius: 0;
+    }
+    
+    .cardImgBox:after {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 661px) {
+    .serviceCard {
+        margin: 0;
+        width: 50%;
+        height: 150px;
+    }
+    .cardImgBox {
+        width: 100%;
+        border-radius: 0;
+    }
+    
+    .cardImg {
+        height: 150px;
+        border-radius: 0;
+    }
+
+    .cardTitle {
+        font-size: 15px;
+    }
 }

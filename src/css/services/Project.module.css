@@ -15,7 +15,7 @@
 }
 .modalSection {
     width: 90%;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
     border-radius: 0.3rem;
     background-color: #fff;
@@ -34,8 +34,8 @@
 }
 
 .modalContainer {
-    max-width: 400px;
-    height: 500px;
+    max-width: 500px;
+    height: 600px;
     display: flex;
     flex-direction: column;
 }

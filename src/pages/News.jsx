@@ -80,7 +80,6 @@ const News = ({db}) => {
 
     useEffect(() => {
         setPostData(datas);
-        console.log(datas);
     }, [datas]);
 
     useEffect(() => {

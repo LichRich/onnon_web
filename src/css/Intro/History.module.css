@@ -4,6 +4,13 @@
     min-height: 80vh;
 }
 
+.historyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .historyTitleBox {
     display: flex;
     width: 100%;
@@ -105,4 +112,115 @@
 .monthContents {
     margin: 10px 0 !important;
     font-size: 20px;
+}
+
+@media (max-width: 1199px) {
+    .outerBox {
+        width: 100%;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+    
+    .contentsOuterBox, .yearContentsBox {
+        display: flex;
+    }
+    .yearContentsBox {
+        margin: 10px 0;
+    }
+    .yearBox {
+        width: 70px;
+        text-align: end;
+        margin-right: 20px;
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .monthBox {
+        width: 40px;
+        text-align: center;
+        margin: 8px 20px 5px 0;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .monthContents {
+        margin: 10px 0 !important;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .historyTitleBox {
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: center;
+        align-items: center;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    
+    .navBox {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+    }
+    .navItem, .activeNavItem {
+        position: relative;
+        list-style: none;
+        font-size: 18px;
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        cursor: pointer;
+        transition: 0.3s;
+        margin: 0 10px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .activeNavItem {
+        background-color: #000;
+        font-weight: bold;
+        color: #fff;
+    }
+    
+    .navItem::before, .navItem::after {
+        position: absolute;
+        content: "";
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 50%;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s;
+    }
+    
+    .contentsOuterBox, .yearContentsBox {
+        display: flex;
+    }
+    .yearContentsBox {
+        margin: 10px 0;
+    }
+    .yearBox {
+        width: 50px;
+        text-align: end;
+        margin-right: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .monthBox {
+        width: 30px;
+        text-align: center;
+        margin: 7px 20px 5px 0;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .monthContents {
+        margin: 9px 0 !important;
+        font-size: 15px;
+        word-break: keep-all;
+    }
 }

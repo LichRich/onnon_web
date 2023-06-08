@@ -34,7 +34,8 @@ const Header = ({menuToggle, menuToggler}) => {
         <nav className="navbar" id='top-navbar'>
             <div className="navbar-logo">
                 <Link to='/'>
-                    <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="logo" id="logo" />
+                    {/* <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="logo" id="logo" /> */}
+                    <img src={process.env.PUBLIC_URL + '/symbolonly_w_white.png'} alt="logo" id="logo" />
                 </Link>
             </div>
             <div className="menu-box">

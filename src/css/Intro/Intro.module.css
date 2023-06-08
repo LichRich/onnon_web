@@ -45,3 +45,33 @@
 .introDesc {
     margin-bottom: 10px;
 }
+
+@media (max-width: 686px) {
+    .introTitleBox {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        padding-top: 50px;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .introDescBox {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100px;
+        justify-content: start;
+        align-items: center;
+        color: #fff;
+        font-size: 15px;
+    }
+    .introDesc {
+        margin-bottom: 10px;
+        word-break: keep-all;
+        text-align: center;
+    }
+}
