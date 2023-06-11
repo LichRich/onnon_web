@@ -1,3 +1,8 @@
+.contactSection {
+    height: auto;
+    min-height: 100vh;
+}
+
 .titleBox {
     display: flex;
     width: 100%;
@@ -18,9 +23,14 @@
 }
 
 #map {
-    /* margin: auto; */
     width: 100%;
     height: 400px;
+}
+.addr {
+    word-break: keep-all;
+}
+.email, .phone {
+    font-size: 16px;
 }
 
 .rightTitleBox {
@@ -33,6 +43,11 @@
     margin-bottom: 20px;
 }
 
+.categoryBox {
+    margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
 fieldset {
     border: 0;
 }
@@ -40,26 +55,147 @@ fieldset {
 legend {
     width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     margin: 20px 0;
+}
+.categoryBox label {
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 input[type='checkbox'] {
     display: none;
 }
+label:has([type='checkbox']:checked) {
+    background-color: #aaa;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
 
 .infoTable {
-    /* width: 100%; */
     margin: auto;
     border-spacing: 10px 5px;
 }
 .infoTitle {
     text-align: end;
+    font-weight: bold;
+}
+.value {
+    height: 25px;
+    border-radius: 5px;
 }
 textarea {
     width: 100% !important;
     height: 200px !important;
     border: 1px solid #aaa;
     resize: none;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.submit {
+    cursor: pointer;
+    width: 80px;
+    height: 35px;
+    position: relative;
+    background: #000;
+    font-weight: bold;
+    color: #fff;
+    line-height: 30px;
+    font-size: 16px;
+    padding: 0;
+    border: none;
+    z-index: 1;
+    -webkit-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.submit:hover {
+    background: transparent;
+    color: #000;
+}
+.submit:after,
+.submit:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 100%;
+    height: 50%;
+    right: 0;
+    z-index: -1;
+    background: #000;
+    transition: all 0.2s ease;
+}
+.submit:before {
+    top: 0;
+}
+.submit:after {
+    bottom: 0;
+}
+.submit:hover:after,
+.submit:hover:before {
+    height: 0;
+    background-color: #000;
+}
+
+@media (max-width: 991px) {
+    .contactContainer {
+        flex-direction: column;
+    }
+    .leftBox, .rightBox {
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 570px) {
+    #map {
+        height: 300px;
+    }
+    .titleBox {
+        height: 100px;
+        align-items: flex-end;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .rightTitleBox {
+        font-size: 18px;
+    }
+    legend {
+        font-size: 15px;
+    }
+    .addr, .email, .phone {
+        font-size: 12px;
+    }
+    .categoryBox label {
+        width: 60px;
+        height: 23px;
+        line-height: 23px;
+        font-size: 12px;
+    }
+    .value {
+        height: 20px;
+        font-size: 15px;
+    }
+    .submit {
+        width: 60px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
 }

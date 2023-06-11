@@ -30,50 +30,6 @@ const News = ({db}) => {
         getItems();
     }, []);
 
-    // useEffect(() => {
-    //     const getItems = () => {
-    //         setDatas([
-    //             {
-    //                 id: 0,
-    //                 title: 'dummy',
-    //                 date: '2023-06-01',
-    //                 img: '',
-    //                 content: '<p>this is dummy content</p>',
-    //                 category: 'notice'
-    //             }, {
-    //                 id: 1,
-    //                 title: 'dummy2',
-    //                 date: '2023-06-01',
-    //                 img: '',
-    //                 content: '<p>this is dummy content2</p>',
-    //                 category: 'news'
-    //             }, {
-    //                 id: 2,
-    //                 title: 'dummy2',
-    //                 date: '2023-06-01',
-    //                 img: '',
-    //                 content: '<p>this is dummy content2</p>',
-    //                 category: 'news'
-    //             }, {
-    //                 id: 3,
-    //                 title: 'dummy2',
-    //                 date: '2023-06-01',
-    //                 img: '',
-    //                 content: '<p>this is dummy content2</p>',
-    //                 category: 'news'
-    //             }, {
-    //                 id: 4,
-    //                 title: 'dummy2',
-    //                 date: '2023-06-01',
-    //                 img: '',
-    //                 content: '<p>this is dummy content2</p>',
-    //                 category: 'news'
-    //             }
-    //         ]);
-    //     };
-    //     getItems();
-    // }, [])
-
     const menuTab = ['전체', '새소식', '공지사항'];
 
     let navigate = useNavigate();
@@ -147,10 +103,10 @@ const News = ({db}) => {
                     <div className={styles.tabContentBox}>
                         <div className={styles.cardList}>
                             {
-                                postData.map((data) => {
+                                postData.map((data, idx) => {
                                     return (
                                         <NewsCard
-                                            key={data.id}
+                                            key={idx}
                                             img={data.img[0]}
                                             title={data.title}
                                             date={data.date}

@@ -31,7 +31,7 @@ function App() {
         <Route path='/services' element={<Services db={firestore} />} />
         <Route path='/news' element={<News db={firestore} />} />
         <Route path='/detail' element={<Detail />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/contact' element={<Contact db={firestore} />} />
       </Routes>
 
       < Footer />
