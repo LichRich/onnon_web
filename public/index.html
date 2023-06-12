@@ -5,9 +5,22 @@
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="theme-color" content="#000000"/>
-        <meta name="description" content="Web site created using create-react-app"/>
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
         <link rel="/manifest" href="%PUBLIC_URL%/manifest.json"/>
+
+        <meta name="description" content="온앤온 협동조합 홈페이지입니다."/>
+        <meta name="google" content="notranslate">
+        <meta name="robots" content="index">
+        <meta name="keywords" content="마케팅, 홍보, 영상, 영상제작, 컨텐츠, 웹페이지, 홈페이지, 행사, 기획, 행사운영, 운영, 대학, 기업, 교육기관, 관공서, 공공기관, 지역문제, 지역문제해결, 디자인">
+        <meta name="format-detection" content="telephone=no, email=no">
+
+        <meta property="og:description" content="온앤온 협동조합 홈페이지입니다.">
+        <meta property="og:title" content="온앤온 협동조합">
+        <meta property="og:type" content="website">
+        <!-- <meta property="og:url" content="https://onandoncoop.com"> -->
+        <meta property="og:image" content="%PUBLIC_URL%/logo192.png">
+
+        <!-- <link rel="canonical" href="https://onandoncoop.com"> -->
 
         <link
             async="async"
@@ -30,9 +43,13 @@
             type="text/javascript"
             src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=%REACT_APP_NAVER_API_KEY%"></script>
 
+        <script type="text/javascript">
+            document.oncontextmenu = function () {return false;}
+        </script>
+
         <title>온앤온 협동조합</title>
     </head>
-    <body>
+    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
         <div id="root"></div>
     </body>
 </html>

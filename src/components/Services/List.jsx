@@ -85,11 +85,11 @@ const List = ({data, handler}) => {
             },
             {
                 title: '대학',
-                content: '대학 content',
+                content: '대학 내 다양한 행사를 기획하고, 생동감있게 기록합니다.',
             },
             {
                 title: '교육기관',
-                content: '교육기관 content',
+                content: '학생의 눈높이에서 메시지를 전달하고, 스스로 경험하고 느낄 수 있는 교육을 지향합니다.',
             },
         ]
     ];
@@ -205,10 +205,10 @@ const List = ({data, handler}) => {
                             </div>
                             <div className={styles.innerList}>
                                 {
-                                    postData.map((data) => {
+                                    postData.map((data, idx) => {
                                         return (
                                             <Card
-                                                key={data.id}
+                                                key={idx}
                                                 img={data.img}
                                                 title={data.title}
                                                 handler={() => handler(data)}

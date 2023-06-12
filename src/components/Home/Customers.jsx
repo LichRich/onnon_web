@@ -20,11 +20,11 @@ const Customers = ({list}) => {
         }, {
             name: '대학',
             img: process.env.PUBLIC_URL + '/customers/university.jpg',
-            desc: '대학 contents'
+            desc: '대학 내 다양한 행사를 기획하고, 생동감있게 기록합니다.'
         }, {
             name: '교육기관',
             img: process.env.PUBLIC_URL + '/customers/edu.jpg',
-            desc: '교육기관 contents'
+            desc: '학생의 눈높이에서 메시지를 전달하고, 스스로 경험하고 느낄 수 있는 교육을 지향합니다.'
         }
     ]
 

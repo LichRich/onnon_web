@@ -9,6 +9,7 @@
     transition: all 0.2s ease;
     cursor: pointer;
     margin: 20px;
+    background-color: rgb(255, 248, 239);
 }
 
 .newsCard:hover {

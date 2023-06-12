@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import CheckBoxGroup from '../components/Contact/CheckBoxGroup';
 import CheckBox from '../components/Contact/CheckBox';
 
@@ -10,9 +10,14 @@ const Contact = ({db}) => {
     const mapElement = useRef(null);
     const [categories, setCategories] = useState([]);
 
-    // const [post]
+    const [postId, setPostId] = useState("");
+    const [name, setName] = useState("");
+    const [company, setCompany] = useState("");
+    const [phone, setPhone] = useState("");
+    const [email, setEmail] = useState("");
+    const [ask, setAsk] = useState("");
 
-    const dir = 'contact';
+    const dir = "contact";
 
     useEffect(() => {
         const {naver} = window;
@@ -40,16 +45,42 @@ const Contact = ({db}) => {
         });
     }, []);
 
+    const nameChangeHandler = (e) => {
+        setName(e.currentTarget.value);
+        setPostId(e.currentTarget.value + Date.now());
+    }
+    const companyChangeHandler = (e) => {
+        setCompany(e.currentTarget.value);
+    }
+    const phoneChangeHandler = (e) => {
+        setPhone(e.currentTarget.value);
+    }
+    const emailChangeHandler = (e) => {
+        setEmail(e.currentTarget.value);
+    }
+    const askChangeHandler = (e) => {
+        setAsk(e.currentTarget.value);
+    }
+
     const uploadDoc = async (e) => {
         e.preventDefault();
 
         try {
-            // const docRef = await setDoc(doc(db, dir, postId), {
-            //     id: postId,
-            //     category: 
-            // })
+            const docRef = await setDoc(doc(db, dir, postId), {
+                id: postId,
+                category: categories,
+                name: name,
+                company: company,
+                phone: phone,
+                email: email,
+                ask: ask
+            });
         } catch (err) {
             console.error("error adding doc: ", err);
+        } finally {
+            if(!alert("문의사항이 제출되었습니다.")) {
+                window.location.reload();
+            }
         }
     }
 
@@ -68,7 +99,7 @@ const Contact = ({db}) => {
                             <p className={styles.phone}>전화번호: 010-9176-1429</p>
                         </div>
                     </div>
-                    <form className={styles.rightBox}>
+                    <form className={styles.rightBox} onSubmit={uploadDoc}>
                         <div className={styles.rightTitleBox}>
                             <p className={styles.rightTitle}>
                                 온라인 문의
@@ -76,11 +107,11 @@ const Contact = ({db}) => {
                         </div>
                         <div className={styles.categoryBox}>
                             <CheckBoxGroup label="서비스 분야" values={categories} onChange={setCategories}>
-                                <CheckBox value="video">영상</CheckBox>
-                                <CheckBox value="design">디자인</CheckBox>
-                                <CheckBox value="web">웹사이트</CheckBox>
-                                <CheckBox value="event">행사</CheckBox>
-                                <CheckBox value="solution">지역문제</CheckBox>
+                                <CheckBox value="영상">영상</CheckBox>
+                                <CheckBox value="디자인">디자인</CheckBox>
+                                <CheckBox value="웹사이트">웹사이트</CheckBox>
+                                <CheckBox value="행사">행사</CheckBox>
+                                <CheckBox value="지역문제">지역문제</CheckBox>
                             </CheckBoxGroup>
                         </div>
                         <div className={styles.infoTableBox}>
@@ -90,25 +121,25 @@ const Contact = ({db}) => {
                                     <tr>
                                         <td className={styles.infoTitle}>이름</td>
                                         <td>
-                                            <input type="text" name="name" id="name" className={styles.value} placeholder="이름" required/>
+                                            <input type="text" name="name" id="name" className={styles.value} placeholder="이름" onChange={nameChangeHandler} required/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td className={styles.infoTitle}>소속 기업</td>
                                         <td>
-                                            <input type="text" name="company" id="company" placeholder="기업명" className={styles.value} required/>
+                                            <input type="text" name="company" id="company" placeholder="기업명" className={styles.value} onChange={companyChangeHandler} required/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td className={styles.infoTitle}>연락처</td>
                                         <td>
-                                            <input type="text" name="phone" id="phone" placeholder="연락처" className={styles.value} required/>
+                                            <input type="text" name="phone" id="phone" placeholder="연락처" className={styles.value} onChange={phoneChangeHandler} required/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td className={styles.infoTitle}>이메일</td>
                                         <td>
-                                            <input type="email" name="email" id="email" placeholder="이메일" className={styles.value} required/>
+                                            <input type="email" name="email" id="email" placeholder="이메일" className={styles.value} onChange={emailChangeHandler} required/>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -116,7 +147,7 @@ const Contact = ({db}) => {
                         </div>
                         <div className={styles.askBox}>
                             <legend>문의사항</legend>
-                            <textarea name="ask" id="ask" required></textarea>
+                            <textarea name="ask" id="ask" onChange={askChangeHandler} required></textarea>
                         </div>
                         <div className={styles.btnBox}>
                             <button type="submit" id="submit" className={styles.submit}>제출</button>
