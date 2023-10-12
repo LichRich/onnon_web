@@ -10,9 +10,9 @@ const Intro = () => {
         <main className="main">
             <section className={["sections", styles.introSection].join(' ')}>
                 <div className={["backgrounds", styles.introBackground].join(' ')}>
-                    <div className={styles.introBgBox}>
+                    {/* <div className={styles.introBgBox}>
                         <img src="" alt="intro bg" className={styles.introBg}/>
-                    </div>
+                    </div> */}
                 </div>
                 <div className={["containers", styles.introContainer].join(' ')}>
                     <div className={styles.introTitleBox}>

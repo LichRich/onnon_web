@@ -46,6 +46,7 @@
     margin: 0 10px;
     border-radius: 10px;
     overflow: hidden;
+    z-index: 5;
 }
 .activeMenuItem {
     background-color: #000;

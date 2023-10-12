@@ -11,7 +11,7 @@ const Home = () => {
             <Intro />
             <Services />
             <Customers />
-            <MainContact />
+            {/* <MainContact /> */}
         </main>
     );
 

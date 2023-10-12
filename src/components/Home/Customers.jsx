@@ -24,7 +24,8 @@ const Customers = ({list}) => {
         }, {
             name: '교육기관',
             img: process.env.PUBLIC_URL + '/customers/edu.jpg',
-            desc: '학생의 눈높이에서 메시지를 전달하고, 스스로 경험하고 느낄 수 있는 교육을 지향합니다.'
+            desc0: '학생의 눈높이에서 메시지를 전달하고,',
+            desc1: '스스로 경험하고 느낄 수 있는 교육을 지향합니다.'
         }
     ]
 
@@ -32,12 +33,16 @@ const Customers = ({list}) => {
         return (list.map((c, index) => {
             return (
                 <div key={index} className={styles.customerCard} onMouseOver={() => getDesc(index)}>
+                    <div className={styles.cardImgBox}>
+                        <img src={c.img} alt="" className={styles.cardImg}/>
+                    </div>
                     <div className={styles.cardContents}>
-                        <div className={styles.cardImgBox}>
-                            <img src={c.img} alt="" className={styles.cardImg}/>
-                        </div>
                         <div className={styles.cardTitleBox}>
                             <p className={styles.cardTitle}>{c.name}</p>
+                        </div>
+                        <div className={styles.cardDescBox}>
+                            {index==3 ? <><p className={styles.cardDesc}>{c.desc0}</p>
+                                        <p className={styles.cardDesc}>{c.desc1}</p></> : <p className={styles.cardDesc}>{c.desc}</p>}
                         </div>
                     </div>
                 </div>
@@ -56,62 +61,18 @@ const Customers = ({list}) => {
                 .customerSection]
                 .join(' ')}>
             <div
-                className={["containers", styles
-                    .containerCustomer]
-                    .join(' ')}>
+                className={styles.containerCustomer}>
                 <div className={styles.customerTitleBox}>
                     <p className={styles.customerTitle}>주요 고객</p>
                 </div>
                 <div className={styles.customerCardBox}>
                     {getCustomers()}
-                    {/* <div className={styles.customerCard}>
-                        <div className={styles.cardContents}>
-                            <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg}/>
-                            </div>
-                            <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>customer이름</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.customerCard}>
-                        <div className={styles.cardContents}>
-                            <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg}/>
-                            </div>
-                            <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>customer이름</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.customerCard}>
-                        <div className={styles.cardContents}>
-                            <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg}/>
-                            </div>
-                            <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>customer이름</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.customerCard}>
-                        <div className={styles.cardContents}>
-                            <div className={styles.cardImgBox}>
-                                <img src="" alt="" className={styles.cardImg}/>
-                            </div>
-                            <div className={styles.cardTitleBox}>
-                                <p className={styles.cardTitle}>customer이름</p>
-                            </div>
-                        </div>
-                    </div> */
-                    }
                 </div>
-                <div className={styles.customerDescBox}>
+                {/* <div className={styles.customerDescBox}>
                     <p className={styles.customerDesc}>
                         {desc}
-                        {/* 대상에게 제공되는 서비스 설명 */}
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
 

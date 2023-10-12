@@ -1,18 +1,49 @@
-.main {
-  background-image: linear-gradient(to bottom right, #fbc2eb 0%, #a6c1ee 61%);
-}
-#root {
+/* body, html {
+  height: auto !important;
   min-height: 100%;
+} */
+
+* {
+  font-family: 'omyu_pretty';
+  /* color: black !important; */
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -999;
+}
+.app-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  /* background-image: linear-gradient(to bottom right, #fea1e4 0%, #93b9fb 61%) !important; */
 }
 
 .main {
   min-height: 100vh;
+  max-width: 1440px;
+  /* max-width: 100vw; */
+  margin: auto;
+  /* background-image: linear-gradient(to bottom right, #fbc2eb 0%, #a6c1ee 61%); */
 }
 
 .sections {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .backgrounds {
@@ -32,14 +63,14 @@
   width: 100%;
   height: 100%;
   z-index: -5;
-  background-color: rgba(0, 0, 0, 0.6);
-  /* background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 41%); */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 .containers {
   height: 100%;
 }
-@media(min-width: 1400px) {
+/* @media(min-width: 1400px) {
   .containers {
       margin: 0 60px;
   }
@@ -68,7 +99,7 @@
       max-width: 720px;
       margin: auto;
   }
-}
+} */
 
 .row {
   display: flex;
@@ -77,4 +108,26 @@
 
 a {
   text-decoration: none;
+}
+
+
+/* font */
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: NotoSansBold;
+  src: url("../public/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: NotoSansRegular;
+  src: url("../public/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf");
+}
+@font-face {
+  font-family: NotoSansBlack;
+  src: url("../public/fonts/Noto_Sans_KR/NotoSansKR-Black.otf");
 }

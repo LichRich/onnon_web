@@ -1,32 +1,31 @@
-.contactBg,
-.contactSection {
-    height: 400px;
+.contactSection, .contactBg {
+    min-height: 700px;
 }
 
 .contactTitleBox {
     width: 100%;
-    height: 170px;
+    height: 200px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #fff;
+    align-items: flex-end;
+    color: #000;
 }
 .contactTitle {
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 50pt;
+    font-family: NotoSansBlack;
 }
 
 .contactDescBox {
     width: 100%;
-    height: 100px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #000;
 }
 .contactDesc {
-    font-size: 20px;
+    font-size: 20pt;
 }
 
 .contactBtnBox {
@@ -67,6 +66,7 @@
 }
 .contactBtn:hover {
     background: transparent;
+    color: #000;
 }
 .contactBtn:after,
 .contactBtn:before {

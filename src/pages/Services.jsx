@@ -52,10 +52,10 @@ const Services = ({db}) => {
                 className={["sections", styles
                     .serviceSection]
                     .join(' ')}>
-                <div className="backgrounds">
-                    <div className={styles.introBgBox}>
+                <div className={["backgrounds", styles.serviceBg].join(" ")}>
+                    {/* <div className={styles.introBgBox}>
                         <img src="" alt="intro bg" className={styles.introBg}/>
-                    </div>
+                    </div> */}
                 </div>
                 <div
                     className={["containers", styles

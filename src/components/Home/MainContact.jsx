@@ -13,9 +13,9 @@ const MainContact = () => {
     return(
         <section className={["sections", styles.contactSection].join(' ')}>
             <div className={["backgrounds", styles.contactBg].join(' ')}>
-                <div className="">
+                {/* <div className="">
                     <img src="" alt="contact bg" className="" />
-                </div>
+                </div> */}
             </div>
             <div className={["containers", styles.contactContainer].join(' ')}>
                 <div className={styles.contactTitleBox}>

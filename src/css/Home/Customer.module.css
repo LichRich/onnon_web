@@ -1,9 +1,4 @@
-.customerSection {
-    height: 700px;
-}
-
 .containerCustomer {
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,47 +7,47 @@
 
 .customerTitleBox {
     width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     text-align: center;
     color: #000;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 50pt;
+    margin-bottom: 40px;
 }
 
 .customerTitle {
+    font-family: NotoSansBlack;
     padding: 0;
 }
 
 .customerCardBox {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 300px;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .customerCard {
     padding: 0;
-    width: 350px;
-    height: 210px;
+    width: 100%;
+    margin: 50px 0;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
     z-index: 5;
 }
-
-.cardContents {
-    text-decoration: none;
-    position: relative;
-    display: block;
-    margin: auto;
-    overflow: hidden;
+.customerCard:nth-child(2),
+.customerCard:nth-child(4) {
+    flex-direction: row-reverse;
 }
-
-.customerCard:hover .cardImgBox:after {
-    background: none;
+.customerCard:last-child {
+    margin-bottom: 80px;
 }
 
 .cardImgBox {
     position: relative;
-    width: 90%;
-    margin: auto;
+    width: 500px;
     overflow: hidden;
     border-radius: 15px;
     transition: all 0.125s ease-in-out 0s;
@@ -62,7 +57,7 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 210px;
+    height: 400px;
     object-fit: cover;
     border-radius: 15px;
     margin: auto;
@@ -76,62 +71,52 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(17, 17, 17, 0.6);
+    background: rgba(17, 17, 17, 0.3);
     border-radius: 15px;
     transition: all 0.125s ease-in-out 0s;
 }
 
+.cardContents {
+    width:800px;
+    height: 100%;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    /* padding-left: 50px; */
+}
+
+.customerCard:nth-child(2) .cardContents,
+.customerCard:nth-child(4) .cardContents {
+    text-align: end;
+    padding-left: 0;
+    /* padding-right: 50px; */
+}
+
 .cardTitleBox {
     width: 100%;
-    padding: 0 20px;
-    opacity: 1;
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-    text-align: center;
-    overflow: hidden;
+    margin: 40px 0;
 }
 
 .cardTitle {
-    font-family: gmarket-sans;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
+    font-size: 40pt;
+    font-family: NotoSansBold;
+    color: #000;
     margin: 0 0 6px;
 }
 
-.customerCard:hover .cardTitleBox {
-    opacity: 0;
-    z-index: 3;
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transition: all 0.125s ease-in-out 0s;
-}
-
-.customerCard:hover .cardImg {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transition: all 0.125s ease-in-out 0s;
-}
-
-.customerDescBox {
-    display: flex;
+.cardDescBox {
     width: 100%;
-    height: 60px;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
-.customerDesc {
+.cardDesc {
     padding: 0;
-    font-size: 25px;
+    margin: 0;
+    font-size: 20pt;
+    font-family: NotoSansBold;
 }
 
 @media (max-width: 1199px) {
@@ -189,7 +174,6 @@
         transition: all 0.125s ease-in-out 0s;
     }
     .cardTitle {
-        font-family: gmarket-sans;
         font-size: 20px;
         font-weight: bold;
         color: #fff;
@@ -206,7 +190,7 @@
 
     .customerDesc {
         padding: 0;
-        font-size: 25px;
+        font-size: 20px;
     }
 }
 @media (max-width: 991px) {
@@ -275,7 +259,6 @@
         transition: all 0.125s ease-in-out 0s;
     }
     .cardTitle {
-        font-family: gmarket-sans;
         font-size: 20px;
         font-weight: bold;
         color: #fff;
@@ -292,7 +275,7 @@
 
     .customerDesc {
         padding: 0;
-        font-size: 20px;
+        font-size: 16px;
     }
 }
 @media (max-width: 530px) {
@@ -361,7 +344,6 @@
         transition: all 0.125s ease-in-out 0s;
     }
     .cardTitle {
-        font-family: gmarket-sans;
         font-size: 20px;
         font-weight: bold;
         color: #fff;
@@ -378,6 +360,6 @@
 
     .customerDesc {
         padding: 0;
-        font-size: 16px;
+        font-size: 15px;
     }
 }

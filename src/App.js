@@ -12,6 +12,7 @@ import Footer from './components/Footer';
 
 import 'semantic-ui-css/semantic.min.css';
 import { useState } from 'react';
+import Background from './components/Background';
 
 function App() {
 
@@ -24,6 +25,8 @@ function App() {
   return (
     <>
       < Header menuToggle={menuToggle} menuToggler={menuToggleHandler} />
+      
+      <Background />
 
       <Routes>
         <Route exact="exact" path='/' element={<Home />} />
