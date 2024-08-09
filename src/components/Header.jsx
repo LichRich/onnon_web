@@ -27,7 +27,7 @@ const Header = ({menuToggle, menuToggler}) => {
         {
             name: "intro",
             address: "/intro",
-            text: "온앤온 소개"
+            text: "회사 소개"
         },
         {
             name: "services",
@@ -42,7 +42,7 @@ const Header = ({menuToggle, menuToggler}) => {
         {
             name: "contact",
             address: "/contact",
-            text: "Contact Us"
+            text: "Contact"
         },
     ]);
 
@@ -51,7 +51,7 @@ const Header = ({menuToggle, menuToggler}) => {
             <div className="navbarContainer">
                 <div className="navbar-logo">
                     <Link to='/'>
-                        <img src={process.env.PUBLIC_URL + '/logo192.png'} alt="logo" id="logo" />
+                        <img src={process.env.PUBLIC_URL + '/logo_new.png'} alt="logo" id="logo" />
                         {/* <img src={process.env.PUBLIC_URL + '/symbolonly_w_white.png'} alt="logo" id="logo" /> */}
                     </Link>
                 </div>

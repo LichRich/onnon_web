@@ -8,7 +8,7 @@ import styles from '../css/Contact.module.css';
 const Contact = ({db}) => {
 
     const mapElement = useRef(null);
-    const [categories, setCategories] = useState([]);
+    // const [categories, setCategories] = useState([]);
 
     const [postId, setPostId] = useState("");
     const [name, setName] = useState("");
@@ -19,31 +19,31 @@ const Contact = ({db}) => {
 
     const dir = "contact";
 
-    useEffect(() => {
-        const {naver} = window;
-        if(!mapElement || !naver) return;
+    // useEffect(() => {
+    //     const {naver} = window;
+    //     if(!mapElement || !naver) return;
 
-        const location = new naver.maps.LatLng(36.7698, 126.9331);
+    //     const location = new naver.maps.LatLng(36.7698, 126.9331);
         
-        const map = new naver.maps.Map(mapElement.current, {
-            center: location,
-            zoom: 17,
-            zoomControl: false,
-            draggable: false,
-            pinchZoom: false,
-            scrollWheel: false,
-            disableDoubleClickZoom: true,
-            disableDoubleTapZoom: true,
-            disableTwoFingerTapZoom: true,
-            keyboardShortcuts: false,
-            scaleControl: false,
-        });
+    //     const map = new naver.maps.Map(mapElement.current, {
+    //         center: location,
+    //         zoom: 17,
+    //         zoomControl: false,
+    //         draggable: false,
+    //         pinchZoom: false,
+    //         scrollWheel: false,
+    //         disableDoubleClickZoom: true,
+    //         disableDoubleTapZoom: true,
+    //         disableTwoFingerTapZoom: true,
+    //         keyboardShortcuts: false,
+    //         scaleControl: false,
+    //     });
 
-        new naver.maps.Marker({
-            position: location,
-            map,
-        });
-    }, []);
+    //     new naver.maps.Marker({
+    //         position: location,
+    //         map,
+    //     });
+    // }, []);
 
     const nameChangeHandler = (e) => {
         setName(e.currentTarget.value);
@@ -68,7 +68,7 @@ const Contact = ({db}) => {
         try {
             const docRef = await setDoc(doc(db, dir, postId), {
                 id: postId,
-                category: categories,
+                // category: categories,
                 name: name,
                 company: company,
                 phone: phone,
@@ -87,25 +87,20 @@ const Contact = ({db}) => {
     return (
         <main className="main">
             <div className={styles.titleBox}>
-                <p className={styles.title}>Contact</p>
+                <p className={styles.title}>문의하기</p>
             </div>
             <section className={["sections", styles.contactSection].join(" ")}>
                 <div className={["containers", styles.contactContainer].join(" ")}>
-                    <div className={styles.leftBox}>
+                    {/* <div className={styles.leftBox}>
                         <div id={styles.map} ref={mapElement}></div>
                         <div className={styles.infoBox}>
                             <p className={styles.addr}>주소: 충남 아산시 신창면 순천향로 22, B518호 (순천향대학교 산학협력단)</p>
                             <p className={styles.email}>E-mail: onandoncoop@gmail.com</p>
                             <p className={styles.phone}>전화번호: 010-9176-1429</p>
                         </div>
-                    </div>
-                    <form className={styles.rightBox} onSubmit={uploadDoc}>
-                        <div className={styles.rightTitleBox}>
-                            <p className={styles.rightTitle}>
-                                온라인 문의
-                            </p>
-                        </div>
-                        <div className={styles.categoryBox}>
+                    </div> */}
+                    <form className={styles.contactBox} onSubmit={uploadDoc}>
+                        {/* <div className={styles.categoryBox}>
                             <CheckBoxGroup label="서비스 분야" values={categories} onChange={setCategories}>
                                 <CheckBox value="영상">영상</CheckBox>
                                 <CheckBox value="디자인">디자인</CheckBox>
@@ -113,10 +108,25 @@ const Contact = ({db}) => {
                                 <CheckBox value="행사">행사</CheckBox>
                                 <CheckBox value="지역문제">지역문제</CheckBox>
                             </CheckBoxGroup>
-                        </div>
+                        </div> */}
                         <div className={styles.infoTableBox}>
-                            <legend>문의자 정보</legend>
-                            <table className={styles.infoTable}>
+                            <div className={styles.inputBox}>
+                                <span className={styles.inputLabel}>이름 *</span>
+                                <input type="text" name="name" id="name" className={styles.value} placeholder="이름" onChange={nameChangeHandler} required/>
+                            </div>
+                            <div className={styles.inputBox}>
+                                <span className={styles.inputLabel}>연락처 *</span>
+                                <input type="text" name="phone" id="phone" placeholder="연락처" className={styles.value} onChange={phoneChangeHandler} required/>
+                            </div>
+                            <div className={styles.inputBox}>
+                                <span className={styles.inputLabel}>기업</span>
+                                <input type="text" name="company" id="company" placeholder="기업명" className={styles.value} onChange={companyChangeHandler}/>
+                            </div>
+                            <div className={styles.inputBox}>
+                                <span className={styles.inputLabel}>이메일 *</span>
+                                <input type="email" name="email" id="email" placeholder="이메일" className={styles.value} onChange={emailChangeHandler} required/>
+                            </div>
+                            {/* <table className={styles.infoTable}>
                                 <tbody>
                                     <tr>
                                         <td className={styles.infoTitle}>이름</td>
@@ -143,14 +153,14 @@ const Contact = ({db}) => {
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> */}
                         </div>
                         <div className={styles.askBox}>
                             <legend>문의사항</legend>
                             <textarea name="ask" id="ask" onChange={askChangeHandler} required></textarea>
                         </div>
                         <div className={styles.btnBox}>
-                            <button type="submit" id="submit" className={styles.submit}>제출</button>
+                            <button type="submit" id="submit" className={styles.submit}>문의하기</button>
                         </div>
                     </form>
                 </div>

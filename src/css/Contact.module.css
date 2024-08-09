@@ -7,26 +7,32 @@
 .titleBox {
     display: flex;
     width: 100%;
-    height: 150px;
+    height: 60px;
+    margin-top: 100px;
     justify-content: center;
-    align-items: flex-end;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
+    align-items: center;
+}
+.title {
+    font-size: 30pt;
+    font-family: NotoSansBold !important;
 }
 .contactContainer {
     display: flex;
-    /* background-color: #fff; */
+    background-color: #fff;
+    max-width: 1440px;
+    margin: auto;
     padding-top: 40px;
 }
-.leftBox, .rightBox {
-    width: 50%;
+.contactBox {
+    width: 100%;
+    min-height: 700px;
     margin: 0 10px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
-#map {
+/* #map {
     width: 100%;
     height: 400px;
 }
@@ -58,14 +64,14 @@
 }
 fieldset {
     border: 0;
-}
+} */
 
 legend {
     width: 100%;
     text-align: center;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 20pt;
     margin: 20px 0;
+    font-family: NotoSansBold;
 }
 .categoryBox label {
     display: inline-block;
@@ -80,15 +86,34 @@ legend {
     cursor: pointer;
 }
 
-input[type='checkbox'] {
+/* input[type='checkbox'] {
     display: none;
 }
 label:has([type='checkbox']:checked) {
     background-color: #aaa;
     color: #fff;
     transition: all 0.3s ease;
-}
+} */
 
+.infoTableBox {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 80px;
+    margin: auto;
+}
+.inputLabel {
+    font-family: NotoSansBold;
+    font-size: 18pt;
+    height: 30px;
+    color: #000;
+}
 
 .infoTable {
     margin: auto;
@@ -99,14 +124,30 @@ label:has([type='checkbox']:checked) {
     font-weight: bold;
 }
 .value {
-    height: 25px;
+    font-size: 18pt;
     border-radius: 5px;
+    font-family: NotoSansBold;
+    padding: 10px;
+    width: 100%;
+}
+.askBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.askBox legend {
+    text-align: start;
+    width: 90% !important;
+    margin: 20px auto;
 }
 textarea {
-    width: 100% !important;
-    height: 200px !important;
+    width: 90% !important;
+    height: 300px !important;
     border: 1px solid #aaa;
+    font-size: 16pt;
+    padding: 10px;
     resize: none;
+    margin: 0 auto !important;
 }
 
 .btnBox {
@@ -117,14 +158,14 @@ textarea {
 }
 .submit {
     cursor: pointer;
-    width: 80px;
-    height: 35px;
+    width: 180px;
+    height: 60px;
     position: relative;
-    background: #000;
+    background: #ffcd4a;
     font-weight: bold;
-    color: #fff;
+    color: #000;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 20pt;
     padding: 0;
     border: none;
     z-index: 1;
@@ -132,8 +173,8 @@ textarea {
     transition: all 0.2s linear;
 }
 .submit:hover {
-    background: transparent;
-    color: #000;
+    background: #000;
+    color: #fff;
 }
 .submit:after,
 .submit:before {
@@ -144,7 +185,7 @@ textarea {
     height: 50%;
     right: 0;
     z-index: -1;
-    background: #000;
+    background: #ffcd4a;
     transition: all 0.2s ease;
 }
 .submit:before {
@@ -159,7 +200,7 @@ textarea {
     background-color: #000;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
     .contactContainer {
         flex-direction: column;
     }
@@ -206,4 +247,4 @@ textarea {
         line-height: 30px;
         font-size: 14px;
     }
-}
+} */

@@ -50,7 +50,7 @@ const List = ({data, handler}) => {
         }));
     }, [datas]);
 
-    const menuTab = ['분야별', '기관별'];
+    const menuTab = ['분야별 소개', '기관별 소개'];
     const allInnerMenu = [
         [
             {
@@ -162,41 +162,41 @@ const List = ({data, handler}) => {
         <section className={["sections", styles.listSection].join(' ')}>
             <div className={["containers", styles.listContainer].join(' ')}>
                 <div className={styles.outerMenubox}>
-                    <ul className={styles.outerMenuList}>
+                    <div className={styles.outerMenuList}>
                         {
                             menuTab.map((el, idx) => {
                                 return (
-                                    <li
+                                    <p
                                         key={idx}
                                         className={`${idx === isOrgan
                                             ? styles.activeMenuItem
                                             : styles.menuItem}`}
                                         onClick={() => clickMenu(idx)}>
                                         {el}
-                                    </li>
+                                    </p>
                                 )
                             })
                         }
-                    </ul>
+                    </div>
                 </div>
                 <div className={styles.outerContentBox}>
                     <div className={styles.innerMenuBox}>
-                        <ul className={styles.innerMenuList}>
+                        <div className={styles.innerMenuList}>
                             {
                                 innerMenu.map((el, idx) => {
                                     return (
-                                        <li
+                                        <p
                                             key={idx}
                                             className={`${idx === currentTab
                                                 ? styles.activeInnerMenuItem
                                                 : styles.innerMenuItem}`}
                                             onClick={() => activeMenuHandler(idx)}>
                                             {el.title}
-                                        </li>
+                                        </p>
                                     )
                                 })
                             }
-                        </ul>
+                        </div>
                     </div>
                     <div className={styles.innerContentBox}>
                         <div className={styles.innerContent}>

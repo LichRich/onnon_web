@@ -3,33 +3,32 @@ import History from "../components/Intro/History";
 
 import styles from '../css/Intro/Intro.module.css';
 import Crew from "../components/Intro/Crew";
+import Vision from "../components/Intro/Vision";
+import Contact from "../components/Intro/Contact";
 
 const Intro = () => {
 
     return (
         <main className="main">
             <section className={["sections", styles.introSection].join(' ')}>
-                <div className={["backgrounds", styles.introBackground].join(' ')}>
-                    {/* <div className={styles.introBgBox}>
-                        <img src="" alt="intro bg" className={styles.introBg}/>
-                    </div> */}
-                </div>
-                <div className={["containers", styles.introContainer].join(' ')}>
-                    <div className={styles.introTitleBox}>
-                        <p className={styles.introTitle}>
-                            온앤온 협동조합
-                        </p>
+                <div className={["contianers", styles.containerIntro].join(' ')}>
+                    <div className={styles.introLogoBox}>
+                        <img src={process.env.PUBLIC_URL + '/logo_box.png'} alt="main logo" className={styles.introLogo} />
                     </div>
-                    <div className={styles.introDescBox}>
-                        <p className={styles.introDesc}>우리는 희망을 현실로, 그리고 새로운 희망을 만들어갑니다.</p>
-                        <p className={styles.introDesc}>어제의 모습에서 배우고, 오늘에 몰두하며, 내일을 기대하는 온앤온협동조합입니다.</p>
+                    <div className={styles.introTextBox}>
+                        <p className={styles.introText}>뭔가뭔가 어떻게어떻게 하는 기업</p>
+                        <p className={[styles.introText, styles.introName].join([' '])}>온앤온 협동조합입니다.</p>
                     </div>
                 </div>
             </section>
 
-            <Crew />
+            <Vision />
+
+            <Contact />
+
+            {/* <Crew /> */}
             
-            <History />
+            {/* <History /> */}
         </main>
     );
 

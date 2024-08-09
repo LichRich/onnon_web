@@ -13,13 +13,13 @@ const Intro = () => {
                 </div> */}
             </div>
             <div className={["contianers", styles.containerIntro].join(' ')}>
-                <div className={styles.mainLogoBox}>
+                {/* <div className={styles.mainLogoBox}>
                     <img src={process.env.PUBLIC_URL + '/logo_words.png'} alt="main logo" className={styles.mainLogo} />
-                </div>
+                </div> */}
                 <div className={styles.mainTextBox}>
-                    <p className={styles.mainText}>온앤온 협동조합에서 우리는 희망을 현실로,</p>
-                    <p className={styles.mainText}>그리고 새로운 희망을 만들어갑니다.</p>
-                    <p className={styles.mainText}>어제의 모습에서 배우고, 오늘에 몰두하며, 내일을 기대합니다.</p>
+                    <p className={styles.mainText}>메인카피 첫번째 줄. 길이 얼마나 될지</p>
+                    <p className={styles.mainText}>메인카피 두번째 줄. 예상이 안되니</p>
+                    <p className={styles.mainText}>메인카피 세번째 줄. 일단 세 줄로 작성</p>
                 </div>
             </div>
         </section>

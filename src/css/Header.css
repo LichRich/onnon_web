@@ -4,7 +4,7 @@
     width: 100%;
     top: 0;
     z-index: 990;
-    /* background: #fff; */
+    background: #fff;
     transition: all 0.3s ease;
 }
 
@@ -15,7 +15,7 @@
     color: black;
 }
 .navbarContainer {
-    width: 1440px;
+    width: 1980px;
     height: 100%;
     display: flex;
     margin: auto;
@@ -41,7 +41,7 @@
 }
 
 .menu-box {
-    width: 60%;
+    width: 50%;
     height: fit-content;
 }
 
@@ -53,21 +53,19 @@
 }
 
 .menu-item {
-    padding: 10px 20px;
+    padding: 15px 20px;
     border-radius: 5px;
     margin: 0 10px;
     font-family: NotoSansBold;
     font-size: 20pt;
-    color: #fff;
-    /* color: #70a5ff; */
+    color: #000;
     transition: all 0.2s ease;
     cursor: pointer;
 }
 
 .menu-item:hover {
-    /* color: #ff8abb; */
-    background-color: #fff;
-    color: #70a5ff;
+    color: #000 !important;
+    background-color: #FFCD4A;
 }
 
 

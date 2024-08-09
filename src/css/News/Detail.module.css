@@ -1,3 +1,7 @@
+.detailSection {
+    padding-bottom: 20px;
+    border-bottom: 2px solid black;
+}
 .titleBox {
     position: relative;
     display: flex;
@@ -11,8 +15,7 @@
 .title {
     padding-top: 100px;
     line-height: 40px;
-    color: #fff;
-    /* background-color: #fff; */
+    color: #000;
 }
 .date {
     position: absolute;
@@ -20,8 +23,7 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 20px;
-    color: #fff;
-    /* background-color: #fff; */
+    color: #aaa;
 }
 
 .imgBox {

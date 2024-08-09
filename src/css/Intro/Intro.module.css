@@ -1,62 +1,48 @@
-/* .introSection, .introBackground { */
 .introSection {
-    height: 350px;
+    width: 100vw;
+    height: 100vh;
 }
 
-.introBackground {
-    height: 290px;
-    margin-top: 60px;
-    background-color: rgba(255, 255, 255, 0.6);
-}
-
-.introBgBox {
+.containerIntro {
+    width: 100%;
+    height: 100%;
+    margin: auto;
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-.introBg {
-    width: 100%;
+
+.introLogoBox {
+    height: 400px;
+    display: flex;
+    align-items: flex-end;
+    text-align: start;
+    margin: 0 40px;
+}
+.introLogo {
+    width: auto;
     height: 100%;
 }
 
-.introContainer {
-    height: 100%;
+.introTextBox {
+    height: 400px;
     display: flex;
     flex-direction: column;
-}
-
-.introTitleBox {
-    display: flex;
-    width: 100%;
-    height: 200px;
-    padding-top: 50px;
-    justify-content: center;
-    align-items: center;
-    /* color: #fff; */
+    text-align: start;
+    justify-content: flex-end;
+    font-size: 25pt;
     color: #000;
-    font-size: 30px;
-    font-weight: bold;
+}
+.introText {
+    font-family: NotoSansBold !important;
+    margin-bottom: 16pt;
+}
+.introName {
+    font-family: NotoSansBold !important;
+    font-size: 40pt;
 }
 
-.introDescBox {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100px;
-    justify-content: start;
-    align-items: center;
-    /* color: #fff; */
-    color: #000;
-    font-weight: bold;
-    font-size: 18px;
-}
-.introDesc {
-    margin-bottom: 10px;
-}
-
-@media (max-width: 686px) {
+/* @media (max-width: 686px) {
     .introTitleBox {
         display: flex;
         width: 100%;
@@ -84,4 +70,4 @@
         word-break: keep-all;
         text-align: center;
     }
-}
+} */

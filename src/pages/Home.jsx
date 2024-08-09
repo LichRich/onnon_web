@@ -9,8 +9,8 @@ const Home = () => {
     return(
         <main className="main">
             <Intro />
-            <Services />
-            <Customers />
+            {/* <Services />
+            <Customers /> */}
             {/* <MainContact /> */}
         </main>
     );

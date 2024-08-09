@@ -1,0 +1,77 @@
+.contactSection {
+    width: 100%;
+    height: 550px !important;
+    position: relative;
+}
+.contactContainer {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+.contactBgBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.contactImg {
+    width: 100%;
+    height: auto;
+    z-index: -9;
+}
+.contactBgBox::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.contactTitleBox {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contactTitle {
+    text-align: center;
+    font-size: 40pt;
+    color: #fff;
+    font-family: NotoSansBold;
+}
+.contactDesc {
+    text-align: center;
+    font-size: 23pt;
+    color: #fff;
+    font-family: NotoSansBold;
+}
+
+.btnBox {
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contactBtn {
+    background-color: #FFCD4A;
+    color: #000;
+    font-family: NotoSansBold;
+    font-size: 20pt;
+    padding: 15px 20px;
+    border: 5px solid #FFCD4A;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.contactBtn:hover {
+    color: #fff !important;
+}
