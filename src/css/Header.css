@@ -68,7 +68,30 @@
     background-color: #FFCD4A;
 }
 
+@media (max-width: 1800px) {
+    .navbar {
+        height: 100px;
+    }
 
+    .navbarContainer {
+        width: 1440px;
+    }
+
+    #logo {
+        height: 60px;
+    }
+
+    .menu-item {
+        padding: 15px 20px;
+        border-radius: 5px;
+        margin: 0 10px;
+        font-family: NotoSansBold;
+        font-size: 16pt;
+        color: #000;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+}
 
 @media (max-width: 1230px) {
 

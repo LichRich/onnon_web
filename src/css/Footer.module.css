@@ -102,6 +102,46 @@
     font-size: 20pt;
 }
 
+@media (max-width: 1800px) {
+    .footer {
+        height: 180px;
+    }
+    
+    .footerContents {
+        width: 1440px;
+    }
+    
+    .footerLeft div {
+        margin-left: 50px;
+    }
+    
+    .name {
+        font-size: 20pt;
+    }
+    .information {
+        font-size: 12pt;
+        margin: 3px 0 !important;
+    }
+    
+    .footerCopy {
+        margin-bottom: 18px;
+    }
+    .copyright {
+        font-size: 15pt;
+    }
+    
+    .footerSns {
+        margin-top: 15px;
+    }
+    
+    .footerLogo {
+        height: 60px;
+    }
+    .footerSns a {
+        font-size: 25pt;
+    }
+}
+
 @media(max-width: 1080px) {
     .footerText {
         font-size: 1rem;
