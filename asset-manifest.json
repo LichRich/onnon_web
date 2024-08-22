@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/onnon_web/static/css/main.f77f2204.css",
+    "main.css": "/onnon_web/static/css/main.bbb55d39.css",
     "main.js": "/onnon_web/static/js/main.679d6637.js",
     "static/js/787.9c340606.chunk.js": "/onnon_web/static/js/787.9c340606.chunk.js",
     "static/media/NotoSansKR-Black.otf": "/onnon_web/static/media/NotoSansKR-Black.dba005b6b1bed712b472.otf",
@@ -23,12 +23,12 @@
     "static/media/outline-icons.woff": "/onnon_web/static/media/outline-icons.ddae9b1ba9b0b42f5880.woff",
     "static/media/outline-icons.woff2": "/onnon_web/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/onnon_web/index.html",
-    "main.f77f2204.css.map": "/onnon_web/static/css/main.f77f2204.css.map",
+    "main.bbb55d39.css.map": "/onnon_web/static/css/main.bbb55d39.css.map",
     "main.679d6637.js.map": "/onnon_web/static/js/main.679d6637.js.map",
     "787.9c340606.chunk.js.map": "/onnon_web/static/js/787.9c340606.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f77f2204.css",
+    "static/css/main.bbb55d39.css",
     "static/js/main.679d6637.js"
   ]
 }
