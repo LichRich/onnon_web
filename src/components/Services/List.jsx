@@ -201,7 +201,12 @@ const List = ({data, handler}) => {
                     <div className={styles.innerContentBox}>
                         <div className={styles.innerContent}>
                             <div className={styles.introBox}>
-                                <p className={styles.intro}>{innerMenu[currentTab].content}</p>
+                                <div className={styles.introImgBox}>
+                                    <img src={postData[0] ? postData[0].img : ""} alt="대표이미지" className={styles.introImg} />
+                                </div>
+                                <div className={styles.introDescBox}>
+                                    <p className={styles.intro}>{innerMenu[currentTab].content}</p>
+                                </div>
                             </div>
                             <div className={styles.innerList}>
                                 {

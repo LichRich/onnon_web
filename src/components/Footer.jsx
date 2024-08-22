@@ -24,7 +24,7 @@ const Footer = () => {
                         <img src={process.env.PUBLIC_URL + '/logo_new.png'} alt="logo" id={styles.logo} />
                     </div>
                     <div className={styles.snsLinks}>
-                        <a href="https://www.instagram.com/onandon.___.coop/" target="_blank">
+                        <a href="https://www.instagram.com/onnon_coop/" target="_blank">
                             <Icon name="instagram"></Icon>
                         </a>
                         <a href="https://blog.naver.com/onandoncoop" target="_blank">

@@ -1,8 +1,8 @@
 .serviceCard {
     padding: 0;
-    margin: 10px;
-    width: 256px;
-    height: 144px;
+    margin: 10px 30px;
+    width: 419px;
+    height: 280px;
     z-index: 5;
 }
 
@@ -27,7 +27,7 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: all 0.125s ease-in-out 0s;
 }
 
@@ -35,9 +35,9 @@
     display: block;
     overflow: hidden;
     width: 100%;
-    height: 144px;
+    height: 280px;
     object-fit: cover;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     margin: auto;
 }
 
@@ -50,7 +50,7 @@
     top: 0;
     left: 0;
     background: rgba(17, 17, 17, 0.6);
-    border-radius: 20px;
+    /* border-radius: 20px; */
     transition: all 0.125s ease-in-out 0s;
 }
 
