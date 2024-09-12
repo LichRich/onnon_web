@@ -1,11 +1,12 @@
 .contactSection {
     width: 100%;
-    height: 550px !important;
+    height: 300px !important;
+    margin: 40px 0;
     position: relative;
 }
 .contactContainer {
     width: 100%;
-    height: 550px;
+    height: 300px;
     overflow: hidden;
 }
 .contactBgBox {
@@ -42,15 +43,15 @@
 }
 .contactTitle {
     text-align: center;
-    font-size: 40pt;
+    font-size: 20pt;
     color: #fff;
     font-family: NotoSansBold;
 }
 .contactDesc {
     text-align: center;
-    font-size: 23pt;
+    font-size: 14pt;
     color: #fff;
-    font-family: NotoSansBold;
+    font-family: NotoSansRegular;
 }
 
 .btnBox {
@@ -66,9 +67,9 @@
     background-color: #FFCD4A;
     color: #000;
     font-family: NotoSansBold;
-    font-size: 20pt;
-    padding: 15px 20px;
-    border: 5px solid #FFCD4A;
+    font-size: 13pt;
+    line-height: 13pt;
+    padding: 12px 20px;
     border-radius: 5px;
     transition: all 0.2s ease;
 }

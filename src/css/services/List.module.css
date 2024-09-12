@@ -8,16 +8,18 @@
     flex-direction: column;
     min-height: 600px;
     align-items: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 .outerMenubox {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 40px;
     justify-content: center;
     align-items: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 .outerMenuList {
     list-style: none;
@@ -31,21 +33,19 @@
 }
 .menuItem {
     position: relative;
-    font-size: 20pt;
+    font-size: 15pt;
     font-family: NotoSansBold;
-    /* height: 50px; */
-    /* line-height: 50px; */
     padding: 0 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     margin: 0 10px;
 }
 .menuItem:hover {
-    font-size: 25pt;
+    font-size: 18pt;
 }
 .activeMenuItem {
     position: relative;
-    font-size: 25pt;
+    font-size: 18pt;
     font-family: NotoSansBold;
     padding: 0 20px;
     margin: 0 10px;
@@ -63,11 +63,11 @@
 }
 
 .outerContentBox {
-    width: 1440px;
+    width: 1280px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .innerMenuBox {
@@ -85,33 +85,34 @@
 }
 .innerMenuItem {
     margin: 0 !important;
-    width: 180px;
-    height: 50px;
+    width: 140px;
+    height: 45px;
     line-height: 45px;
     text-align: center;
     cursor: pointer;
-    font-family: NotoSansBold;
-    font-size: 15pt;
+    font-family: NotoSansRegular;
+    font-size: 12pt;
     border: 2px solid #ffcd4a;
     border-bottom: 0;
     border-radius: 10px 10px 0 0;
     transition: all 0.3s ease;
 }
 .innerMenuItem:hover {
-    height: 60px;
-    line-height: 55px;
-    font-size: 18pt;
+    height: 50px;
+    line-height: 50px;
+    font-size: 15pt;
+    font-family: NotoSansBold;
     background-color: #ffcd4a;
 }
 .activeInnerMenuItem {
     margin: 0 !important;
-    width: 180px;
-    height: 60px;
-    line-height: 55px;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
     text-align: center;
     cursor: pointer;
     font-family: NotoSansBold;
-    font-size: 18pt;
+    font-size: 15pt;
     border: 2px solid #ffcd4a;
     border-bottom: 0;
     background-color: #ffcd4a;
@@ -124,7 +125,7 @@
     height: 100%;
     border: 2px solid #ffcd4a;
     border-radius: 0 0 10px 10px;
-    min-height: 700px;
+    min-height: 1500px;
 }
 .introBox {
     position: relative;
@@ -132,33 +133,34 @@
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-    height: 500px;
+    height: 300px;
     font-size: 20px;
-    font-weight: bold;
-    margin: 20px 0;
+    margin: 50px 0;
 }
 .introImgBox {
-    width: 540px;
+    width: 400px;
     height: 100%;
     display: flex;
 }
 .introImg {
     width: 100%;
-    height: 360px;
+    height: 300px;
     margin: auto;
 }
 .introDescBox {
     min-width: 400px;
     max-width: 500px;
-    height: 360px;
+    height: 300px;
     display: flex;
     justify-content: start;
     align-items: end;
     margin: auto 0;
+    margin-left: 20px;
 }
 .intro {
     margin: 0;
     word-break: keep-all;
+    font-family: NotoSansRegular !important;
     /* min-width: 400px; */
     /* padding-bottom: 20px; */
 }

@@ -1,6 +1,6 @@
 .newsSection {
     height: fit-content;
-    min-height: 100%;
+    min-height: 100vh;
 }
 
 .newsContainer {
@@ -14,19 +14,22 @@
 .newsTitleBox {
     display: flex;
     width: 100%;
-    height: 150px;
     margin-top: 100px;
+    margin-bottom: 70px;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 25pt;
     color: #000;
+}
+.newsTitle {
+    font-family: NotoSansBold !important;
+    margin: 0 !important;
 }
 
 .tabMenuBox {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 30px;
     justify-content: center;
 }
 .tabMenuList {
@@ -38,10 +41,11 @@
 .menuItem, .activeMenuItem {
     position: relative;
     list-style: none;
-    font-size: 25px;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 20px;
+    font-size: 16pt;
+    height: 45px;
+    width: 100px;
+    text-align: center;
+    line-height: 45px;
     cursor: pointer;
     transition: 0.3s;
     margin: 0 10px;
@@ -52,7 +56,7 @@
 
 .activeMenuItem {
     background-color: #ffcd4a;
-    font-weight: bold;
+    font-family: NotoSansBold !important;
     color: #000;
 }
 
@@ -77,6 +81,7 @@
 }
 .menuItem:hover {
     color: #000;
+    font-family: NotoSansBold !important;
     background-color: transparent;
 }
 .menuItem:hover::before,
@@ -93,14 +98,15 @@
 .tabContentBox {
     display: flex;
     width: 100%;
-    min-height: 500px;
+    min-height: 1000px;
+    margin-top: 20px;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .cardList {
     display: flex;
-    width: 1440px;
+    width: 1280px;
     height: 100%;
     padding: 20px 0;
     flex-wrap: wrap;

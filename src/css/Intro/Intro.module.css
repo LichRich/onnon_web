@@ -13,7 +13,7 @@
 }
 
 .introLogoBox {
-    height: 400px;
+    height: 300px;
     display: flex;
     align-items: flex-end;
     text-align: start;
@@ -25,21 +25,21 @@
 }
 
 .introTextBox {
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     text-align: start;
     justify-content: flex-end;
-    font-size: 25pt;
+    font-size: 14pt;
     color: #000;
 }
 .introText {
     font-family: NotoSansBold !important;
-    margin-bottom: 16pt;
+    margin-bottom: 6pt;
 }
 .introName {
     font-family: NotoSansBold !important;
-    font-size: 40pt;
+    font-size: 25pt;
 }
 
 /* @media (max-width: 686px) {

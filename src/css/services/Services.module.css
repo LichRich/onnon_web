@@ -11,13 +11,13 @@
     font-weight: bold;
 }
 .title {
-    font-size: 30pt;
+    font-size: 25pt;
     font-family: NotoSansBold;
     padding-bottom: 20px;
 }
 
 @media (max-width: 767px) {
     .titleBox {
-        font-size: 25px;
+        font-size: 20pt;
     }
 }
